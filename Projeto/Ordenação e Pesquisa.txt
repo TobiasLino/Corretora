@@ -1,0 +1,41 @@
+	O sistema exige a pesquisa de dados de clientes de acordo com os filtros listados
+para isso, o algoritmo deve ordenar a estrutura de dados da classe do cliente, ou seja,
+os atributos da classe "Cliente" deverão ser ordenados pelo método quicksort de Ordenação de
+estruturas para, em seguida, ser pesquisada pelo método de pesquisa binária. Este método é mais rápido em estruturas ordenadas.
+	Como os filtros deverão se aplicar a String e valores a pesquisa também deverá realizar-se dentro dos dados encontrados na estrutura, assim ao utilizar a pesquisa binária para encontrar um dado dentro da estrutura, a pesquisa sequencial deverá encontrar um dado específico, estabelecido pelo filtro, dentro do valor encontrado após a primeira pesquisa.
+
+
+
+
+Modelo de Ordenação quicksort para uma estrutura de endereço
+void quick_struct(struct address item[], int count)
+{
+	qs_struct(item,0,count-1)
+}
+
+void qs_struct(struct address item[], int left, int right)
+{
+	register int i, j;
+	char *x;
+	struct address temp;
+	
+	i = left; j = right;
+	x = item[(left+right)/2].zip;
+	
+	do {
+		while(strcmp(item[i].zip, x)<0 && j<right) i++;
+		while(strcmp(item[j].zip, x)>0 && j>left) j++;
+		if(i<=j) {
+			temp = item[i];
+			item[i] = item[j];
+			item[j] = temp;
+			i++; j--;
+		}
+	} while(i<=j);
+	if(left<j) qs_struct(item, left, j);
+	if(i<right) qs_struct(item, i, right);
+}
+
+
+
+É NECESSÁRIO O USO DE UM QUICKSORT PARA ARQUIVOS, DEVIDO À NECESSIDADE DE SLAVAR OS DADOS DOS CLIENTE EM UM ARQUIVO
