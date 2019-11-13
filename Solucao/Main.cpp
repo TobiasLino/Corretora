@@ -19,20 +19,35 @@ class Cliente {
         void setBasicInfo(char*, char*, char, char, char*, char*, int*, long, long, long);
         void setContact(char*, char*);
         void setAddress(char*, char*, char*, char*, int, long);
-        void setPurchase(char, char, char, char, char, char, char, int);
-        void setFile(char);
+        void setPurchase(char*, char*, char*, char*, char*, char*, char*, int);
+        void setFile(char*);
         void getName();
         void getContact();
         void getAddres();
         void getPurchase();
         void getFIle();
         void getFullClient();
+        // Exceções
+        class IndexException {
+            public:
+                int index;
+                IndexException(int n) : indice(n) {}
+        };
+        int & operator[](int n) {
+            if(n<0 || n>=quant) throw IndexException(n);
+            return quant[n];
+        }
+        class EmptyInfoException {};
+        class EmptyContactException {};
+        class EmptyAddressException {};
+        class EmptyPurchaseException {};
+        class _ERROR_getInfos {};
     private:
         int *quant;
         // Informações Básicas
         char nome[50];
         char pessoa[2];
-        char EstadoCivil;      // C(asado), S(olteiro), D(ivorciado), V(iuvo)
+        char EstadoCivil;   // C(asado), S(olteiro), D(ivorciado), V(iuvo)
         char sexo;          // M ou F
         char profissao[80];
         char DocProf[30];
@@ -46,7 +61,7 @@ class Cliente {
         // Endereço
         char Rua[50];
         char Bairro[30];
-        char complemento[20];
+        char Complemento[20];
         char Cidade[30];
         int numero;
         long CEP;
@@ -74,7 +89,22 @@ class Corretor {
         void setAddres(char, char, char, char, int, long);
         void getName();
         void getAddress();
-        void getBroker();
+        void getBroker();// Exceções
+        class IndexException {
+            public:
+                int index;
+                IndexException(int n) : indice(n) {}
+        };
+        int & operator[](int n) {
+            if(n<0 || n>=quant) throw IndexException(n);
+            return quant[n];
+        }
+        class EmptyInfoException {};
+        class EmptyContactException {};
+        class EmptyAddressException {};
+        class InexFileException {};
+        class CorruptedFileException {};
+        class _ERROR_getInfos {};
     private:
         int *quant;
         // Informações Básicas
@@ -87,7 +117,7 @@ class Corretor {
         // Endereço
         char Rua[50];
         char Bairro[30];
-        char complemento[20];
+        char Complemento[20];
         char Cidade[30];
         int numero;
         long CEP;
@@ -103,7 +133,21 @@ class Produto {
         void setProduct(char, char, char, char, char, char, float, int);
         void setValues(float, float, float, char, char, char);
         void setFile(char);
-        void getProduct();
+        void getProduct();// Exceções
+        class IndexException {
+            public:
+                int index;
+                IndexException(int n) : indice(n) {}
+        };
+        int & operator[](int n) {
+            if(n<0 || n>=quant) throw IndexException(n);
+            return quant[n];
+        }
+        class EmptyInfoException {};
+        class EmptyValueException {};
+        class InexFileException {};
+        class CorruptedFileException {};
+        class _ERROR_getInfos {};
     private:
         int ID;
         int *quant;
@@ -133,7 +177,8 @@ class Relatorio {
     public:
         Relatorio(int);
         ~Relatorio();
-        // char getResume();
+        void setResume();
+        void getResume();
         void setProductionRel(int, char, char, float, float, float, float, float, float);
         void setPRtoAMMg();
         void getRel();
@@ -190,6 +235,16 @@ class Telemarketing {
         char Recipient[30];
         char Conteudo[20];      // File
 };
+/*
+
+
+ ********** Exceções ********
+
+
+*/
+class FileException {};
+class InexFileException : FileException {};
+class CorruptedFileException : FileException {};
 /*
  * Classes contendo seus métodos de set(Definir) e 
  *  get(Pegar).
@@ -423,12 +478,22 @@ void Produto::getProduct()
   
   
 */
-void setClientQuant();      // Define os parâmetros de inicialização dos objetos de cliente
-void setNewClient(int);     // Adiciona novos clientes
-void setBrokerQuant();      // Define os Parâmetros de inicialização dos objetos de Corretor
-void setNewBroker(int);     // Adiciona novos Corretores
-void setProductQuant();     // Define os parâmetros de inicialização dos objetos de Produto
-void setNewProduct(int);    // Adiciona novos Produtos
+void setClientQuant() throw (Cliente::IndexException);         // Define os parâmetros de inicialização dos objetos de cliente
+// Adiciona novos clientes
+void setNewClient(int) throw (Cliente::IndexException, Cliente::EmptyInfoException, Cliente::EmptyAddressException, Cliente::EmptyContactException, Cliente::EmptyPurchaseException);                 
+void setBrokerQuant() throw (Corretor::IndexException);        // Define os Parâmetros de inicialização dos objetos de Corretor
+// Adiciona novos Corretores
+void setNewBroker(int) throw (Corretor::EmptyInfoException, Corretor::EmptyContactException, Corretor::EmptyAddressException);                 
+void setProductQuant() throw (Produto::IndexException);        // Define os parâmetros de inicialização dos objetos de Produto
+// Adiciona novos Produtos
+void setNewProduct(int) throw (Produto::EmptyInfoException, Produto::EmptyValueException);               
+void OrdinFIle(char*);                  // Ordena as classes no arquivo
+void SeCinF(char*);                     // Pesquisa as classes no arquivo
+void SeSinF(char*);                     // Pesquisa as Strings dentro dos dados das classes
+void SaCtoFile(char*, Cliente x) throw (FileException);       // Salva o Cliente no Arquivo 
+void SaBtoFile(char*, Corretor x) throw (FileException);      // Salva o corretor no arquivo
+void SaPtoFile(char*, Produto x) throw (FileException);       // Salva o produto no arquivo
+void saReltoFile(char*, Relatorio x) throw (FileException);   // Salva o relatório no arquivo
 
 /*
 
@@ -437,7 +502,10 @@ void setNewProduct(int);    // Adiciona novos Produtos
 
 
 */
-int main(void) { return 0; }
+int main(void) 
+{ 
+    return 0;
+}
 
 /*  
 
@@ -531,6 +599,12 @@ void setBrokerQuant()
     cout    << "Insira os dados do(s) Corretor(s). " << endl;
     setNewBroker(n);
 }
+/*
+ *  Função que cria os novos n objetos de Corretor e adiciona as informações nos atributos.
+ *  O usuário insere os dados de forma sequencial, depois todos são inseridos dentro dos métodos 
+ * da classe de Corretor.
+ * 
+*/
 void setNewBroker(int vezes)
 {
 
@@ -550,6 +624,12 @@ void setProductQuant()
     cout    << "insira os dados do(s) produto(s)." << endl;
     setNewProduct(n);
 }
+/*
+ *  Função que cria os novos n objetos de Produto e adiciona as informações dos atributos.
+ *  O usuário insere os dados de forma sequencial, depois todos são inseridos dentro dos métodos 
+ * da classe de Produto.
+ * 
+*/
 void setNewProduct(int vezes)
 {
 
