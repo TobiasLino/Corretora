@@ -14,17 +14,32 @@ using namespace std;
 
 */
 /*
+    ********* Endereço *********
+*/
+ENDERECO::ENDERECO(string r = "", string b = "", string com = "", string cid = "", int n = 0, long c = 0)   // cria a instância com valores default
+{
+    Rua = r;
+    Bairro = b;
+    Complemento = com;
+    Cidade = cid;
+    numero = n;
+    CEP = c;
+}
+void ENDERECO::getAddress()
+{
+    cout    << "Rua: " << Rua << endl
+            << "Bairro: " << Bairro << endl
+            << "Complemento: " << Complemento << endl
+            << "Cidade: " << Cidade << endl
+            << "Número: " << numero << endl
+            << "CEP: " << CEP << endl;
+}
+
+/*
     ********* Client ********    
 */
-Cliente::Cliente(int q)
-{
-    quant = new int[q];
-}
-Cliente::~Cliente()
-{
-    delete[] quant;
-}
-void Cliente::setBasicInfo(string n, string p, string ec, string s, string pr, string dp, int *nasc, long cpf, long rg, long cnh)
+// Construtor
+CLIENTE::CLIENTE(string n = "", string p = "", string ec = "", string s = "", string pr = "", string dp = "", int* nasc=0, long cpf = 0, long rg = 0, long CNH = 0)   // cria a instância com valores default
 {
     nome = n;
     pessoa = p;
@@ -37,21 +52,26 @@ void Cliente::setBasicInfo(string n, string p, string ec, string s, string pr, s
     RG = rg;
     CNH = cnh;
 }
-void Cliente::setContact(char t[16], char e[80])
+/*
+    métodos set
+*/
+void CLIENTE::setAddress(string r = "", string b = "", string com = "", string cid = "", int n = 0, long c = 0)   // cria a instância com valores default
+{
+    ENDERECO *ptr;
+    ptr = &this.endereco;
+    ptr->Rua = r;
+    ptr->Bairro = b;
+    ptr->Complemento = com;
+    ptr->Cidade = cid;
+    ptr->numero = n;
+    ptr->CEP = c;
+}
+void CLIENTE::setContact(string t = "", string e = "")   // cria a instância com valores default
 {
     telefone = t;
     email = e;
 }
-void Cliente::setAddress(char *r, char *b, char *com, char *cid, int n, long c)
-{
-    Rua = r;
-    Bairro = b;
-    Complemento = com;
-    Cidade = cid;
-    numero = n;
-    CEP = c;
-}
-void Cliente::setPurchase(char *a, char *c, char *h, char *obs, char *indx, char *indxyz, char *rf, int r)
+void CLIENTE::setPurchase(string a = "", string c = "", string h = "", string obs = "", string indx = "", string indxyz = "", string rf = "", int r = 0)    // cria a instância com valores default
 {
     AssociacaoAMMG = a;
     Corretor = c;
@@ -62,7 +82,7 @@ void Cliente::setPurchase(char *a, char *c, char *h, char *obs, char *indx, char
     RelacaoFamiliar = rf;
     Renda = r;
 }
-void Cliente::setFile(char nameFile)
+void CLIENTE::setFile(string nameFile = "")
 {
     Anexo = fopen(nameFile);
     if(Anexo)
@@ -71,7 +91,10 @@ void Cliente::setFile(char nameFile)
         cout << "Arquivo inexistente. " << endl;
     
 }
-void Cliente::getName()
+/*
+    Métodos get
+*/
+void CLIENTE::getName()
 {
     cout    << "Nome: " << this->nome
             << "Pessoa(Física ou Jurídica): " << this->pessoa
@@ -84,12 +107,12 @@ void Cliente::getName()
             << "RG: " << this->RG
             << "CNH: " << this->CNH;
 }
-void Cliente::getContact()
+void CLIENTE::getContact()
 {
     cout    << "Telefone: " << this->telefone
             << "Email: " << this->email;
 }
-void Cliente::getAddres()
+void CLIENTE::getAddres()
 {
     cout    << "Rua: " << this->Rua
             << "Número: " << this->numero
@@ -98,7 +121,7 @@ void Cliente::getAddres()
             << "Cidade: " << this->Cidade
             << "CEP: " << this->CEP;
 }
-void Cliente::getPurchase()
+void CLIENTE::getPurchase()
 {
     cout    << "Associação com a AMMG: " << this->AssociacaoAMMG
             << "Corretor: " << this->Corretor
@@ -114,11 +137,11 @@ void Cliente::getPurchase()
  * !!!!!!!!!!!!!!!!!!!11
  * 
  */
-void Cliente::getFile()
+void CLIENTE::getFile()
 {
     
 }
-void Cliente::getFullClient()
+void CLIENTE::getFullClient()
 {
     getName();
     getContact();
@@ -129,34 +152,36 @@ void Cliente::getFullClient()
 /*
  *  Corretor 
 */
-Corretor::Corretor(int q)
-{
-    quant = new int[q];
-}
-Corretor::~Corretor()
-{
-    delete[] quant;
-}
-void Corretor::setBroker(char n[50], int t, long cpf)
+// Construtor
+CORRETOR::CORRETOR(string n="", int t=0, long cpf=0)    // cria a instância com valores default 
 {
     Nome = n;
     type = t;
     CPF_CNPJ = cpf;
 }
-void Corretor::setContact(char t, char e)
+/*
+    métodos set
+*/
+void CORRETOR::setContact(char t, char e)
 {
     telefone = t;
     email = e;
 }
-void Corretor::setAddres(char r, char b, char com, char cid, int n, long c){
-    Rua = r;
-    Bairro = b;
-    Complemento = com;
-    Cidade = cid;
-    numero = n;
-    CEP = c;
+void CORRETOR::setAddres(char r, char b, char com, char cid, int n, long c)
+{
+    ENDERECO *ptr;
+    ptr = &this.endereco;
+    ptr->Rua = r;
+    ptr->Bairro = b;
+    ptr->Complemento = com;
+    ptr->Cidade = cid;
+    ptr->numero = n;
+    ptr->CEP = c;
 }
-void Corretor::getName()
+/*
+    métodos get
+*/
+void CORRETOR::getName()
 {
     cout    << "Nome: " << this->Nome
             << "Tipo de Usuário: " << this->type
@@ -165,7 +190,7 @@ void Corretor::getName()
             << "Telefone: " << this->telefone
             << "Email: " << this->email;
 }
-void Corretor::getAddress()
+void CORRETOR::getAddress()
 {
     cout    << "Rua: " << this->Rua
             << "Número: " << this->numero
@@ -173,7 +198,7 @@ void Corretor::getAddress()
             << "Cidade: " << this->Cidade
             << "CEP: " << this->CEP;
 }
-void Corretor::getBroker()
+void CORRETOR::getBroker()
 {
     getName();
     getAddress();
@@ -181,19 +206,15 @@ void Corretor::getBroker()
 /*
  * Produto
  */
-Produto::produto(int q)
+PRODUTO::PRODUTO(int q)
 {
     quant = new int[q];
-}
-Produto::~produto()
-{
-    delete[] quant;
 }
 int SetID(int n)
 {
     ID = n;
 }
-void Produto::setProduct(char s, char r, char n, char c, char v, char a, float com, int t)
+void PRODUTO::setProduct(char s, char r, char n, char c, char v, char a, float com, int t)
 {
     Seguradora = s;
     Ramo = r;
@@ -204,7 +225,7 @@ void Produto::setProduct(char s, char r, char n, char c, char v, char a, float c
     Comissao = com;
     Tipo = t;
 }
-void Produto::setValues(float p, float c, float cs , char V, char i, char obs)
+void PRODUTO::setValues(float p, float c, float cs , char V, char i, char obs)
 {
     premio = p;
     comissionamento = c;
@@ -213,11 +234,11 @@ void Produto::setValues(float p, float c, float cs , char V, char i, char obs)
     id = i;
     Observacoes = obs;
 }
-void Produto::setFile(char f)
+void PRODUTO::setFile(char f)
 {
     anexo = f;
 }
-void Produto::getProduct()
+void PRODUTO::getProduct()
 {
     cout    << "Seguradora: " << this->Seguradora
             << "Ramo: " << this->Ramo

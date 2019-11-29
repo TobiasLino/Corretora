@@ -11,13 +11,30 @@ using namespace std;
  * !!!!!!!!!!!!!1É necessário salvar os dados inseridos em um arquivo.!!!!!!!!!!!!!!
 */
 /*
+ * Classe File para arquivos anexados
+*/
+class FILE {};
+/*
+ * Classe endereço, comum a cliente e corretor
+ */
+class ENDERECO {
+public:
+    ENDERECO(string r, string b, string com, string cid, int n, long c);
+    void getAddress();
+private:
+    string Rua;
+    string Bairro;
+    string Complemento;
+    string Cidade;
+    int numero;
+    long CEP;
+};
+/*
  * Classe de Dados do Cliente
  */
-class Cliente {
+class CLIENTE {
     public:
-        Cliente(int);
-        ~Cliente();
-        void setBasicInfo(string, string, string, string, string, string, int*, long, long, long);
+        CLIENTE(string, string, string, string, string, string, int*, long, long, long);
         void setContact(string, string);
         void setAddress(string, string, string, string, int, long);
         void setPurchase(string, string, string, string, string, string, string, int);
@@ -28,167 +45,109 @@ class Cliente {
         void getPurchase();
         void getFIle();
         void getFullClient();
-        // Exceções
-        class IndexException {
-            public:
-                int index;
-                IndexException(int n) : indice(n) {}
-        };
-        int & operator[](int* n) {
-            if(n<0 || n>=quant) throw IndexException(n);
-            return quant[n];
-        }
-        class EmptyInfoException {};
-        class EmptyContactException {};
-        class EmptyAddressException {};
-        class EmptyPurchaseException {};
-        class _ERROR_getInfos {};
     private:
-        int *quant;
         // Informações Básicas
-        string nome[50];
-        string pessoa[2];
+        string nome;
+        string pessoa;
         string EstadoCivil;   // C(asado), S(olteiro), D(ivorciado), V(iuvo)
         string sexo;          // M ou F
-        string profissao[80];
-        string DocProf[30];
+        string profissao;
+        string DocProf;
         int nascimento[3];
         long CPF_CNPJ;
         long RG;
         long CNH;
         // Contato
-        string telefone[16];
-        string email[80];
+        string telefone;
+        string email;
         // Endereço
-        string Rua[50];
-        string Bairro[30];
-        string Complemento[20];
-        string Cidade[30];
-        int numero;
-        long CEP;
+        ENDERECO endereco;
         // Demais dados
-        string AssociacaoAMMG[20];
-        string Corretor[50];
-        string Historico[80];
-        string Observacoes[80][10];
-        string IndicacaoX[50];
-        string IndicouXYZ[50][3];
-        string RelacaoFamiliar[10][3];
+        string AssociacaoAMMG;
+        string Corretor;
+        string Historico;
+        string Observacoes;
+        string IndicacaoX;
+        string IndicouXYZ;
+        string RelacaoFamiliar;
         int Renda;
         // Anexo
-        string Anexo[20];
+        string Anexo;
 };
 /*
  * Classe de Dados do Corretor
  */
-class Corretor {
+class CORRETOR {
     public:
-        Corretor(int);
-        ~Corretor();
-        void setBroker(char, int, long);
-        void setContact(char, char);
-        void setAddres(char, char, char, char, int, long);
+        CORRETOR();
+        void setBroker(string, int, long);
+        void setContact(string, string);
+        void setAddres(string, string, string, string, int, long);
         void getName();
         void getAddress();
-        void getBroker();// Exceções
-        class IndexException {
-            public:
-                int index;
-                IndexException(int n) : indice(n) {}
-        };
-        int & operator[](int n) {
-            if(n<0 || n>=quant) throw IndexException(n);
-            return quant[n];
-        }
-        class EmptyInfoException {};
-        class EmptyContactException {};
-        class EmptyAddressException {};
-        class InexFileException {};
-        class CorruptedFileException {};
-        class _ERROR_getInfos {};
+        void getBroker();
     private:
-        int *quant;
         // Informações Básicas
-        char Nome[50];
+        string Nome;
         int type;
         long CPF_CNPJ;
         // Contato
-        char email[80];
-        char telefone[14];
+        string email;
+        string telefone;
         // Endereço
-        char Rua[50];
-        char Bairro[30];
-        char Complemento[20];
-        char Cidade[30];
-        int numero;
-        long CEP;
+        ENDERECO endereco;
 };
 /*
  * Classe de Dados de Produto
  */
-class Produto {
+class PRODUTO {
     public:
-        Produto(int);
-        ~Produto();
+        PRODUTO(int);
         int setID(int);
-        void setProduct(char, char, char, char, char, char, float, int);
-        void setValues(float, float, float, char, char, char);
-        void setFile(char);
-        void getProduct();// Exceções
-        class IndexException {
-            public:
-                int index;
-                IndexException(int n) : indice(n) {}
-        };
-        int & operator[](int n) {
-            if(n<0 || n>=quant) throw IndexException(n);
-            return quant[n];
-        }
-        class EmptyInfoException {};
-        class EmptyValueException {};
-        class InexFileException {};
-        class CorruptedFileException {};
-        class _ERROR_getInfos {};
+        void setProduct(string, string, string, string, string, string, float, int);
+        void setValues(float, float, float, string, string, string);
+        void setFile(string);
+        void getProduct();
     private:
         int ID;
         int *quant;
         // Informações Básicas
-        char Seguradora[20];
-        char Ramo[20];
-        char Nome[50];
-        char Corretor[50];
-        char Vigencia[50];
-        char Agenciamento[20];
+        string Seguradora;
+        string Ramo;
+        string Nome;
+        string Corretor;
+        string Vigencia;
+        string Agenciamento;
         float Comissao;
         int Tipo;
         // Valores
         float premio;
         float comissionamento;
         float capitalsegurado;
-        char Veiculo[30];
-        char id[20];
-        char Observacoes[80][10];
+        string Veiculo;
+        string id;
+        string Observacoes;
         // Anexo
-        char anexo[20];
+        string anexo;
 };
 /*
  * Classe de Dados de Relatório
  */
-class Relatorio {
+class RELATORIO {
     public:
-        Relatorio(int);
+        RELATORIO(int);
         ~Relatorio();
         void setResume();
         void getResume();
-        void setProductionRel(int, char, char, float, float, float, float, float, float);
+        void setProductionRel(int, string, string, float, float, float, float, float, float);
         void setPRtoAMMg();
         void getRel();
     private:
         int *quant;
         // Basic
         int periodo[3];
-        char ClientInic[6];
-        char Ramo[20];
+        string ClientInic;
+        string Ramo;
         float ValorParcela;
         float comissao;
         float AMMGpercent;
@@ -199,24 +158,24 @@ class Relatorio {
 /*
  * Classe de Dados Para Filtros nas Pesquisas
  */
-class Filtro {
+class FILTRO {
     public:
         Filtro(int);
         ~Filtro();
-        void setFilters(char, char, char, int, long);
+        void setFilters(string,string,string, int, long);
     private:
         int *quant;
         // Filtros
-        char PNome[50];
-        char Pemail[50];
-        char Pseguro[30];
+        string PNome;
+        string Pemail;
+        string Pseguro;
         int Pidade;
         long PCPF;
 };
 /* 
  * Classe de Acesso ao Calendário
  */
-class Calendario {
+class CALENDARIO {
     public:
         void AdicionarPagamento(int, float);
         void ImprimirPagamentos(int[]);
@@ -226,23 +185,13 @@ class Calendario {
 /* 
  * Classe de Operações de Telemarketing
  */
-class Telemarketing {
+class TELEMARKETING {
     public:
         void Autosend();
         void SendEmail();
         void SelectClient();
     private:
-        char Sender[30];
-        char Recipient[30];
-        char Conteudo[20];      // File
+        string Sender;
+        string Recipient;
+        string Conteudo;      // File
 };
-/*
-
-
- ********** Exceções ********
-
-
-*/
-class FileException {};
-class InexFileException : FileException {};
-class CorruptedFileException : FileException {};
