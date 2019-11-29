@@ -110,7 +110,6 @@ class PRODUTO {
         void getProduct();
     private:
         int ID;
-        int *quant;
         // Informações Básicas
         string Seguradora;
         string Ramo;
@@ -136,7 +135,6 @@ class PRODUTO {
 class RELATORIO {
     public:
         RELATORIO(int);
-        ~Relatorio();
         void setResume();
         void getResume();
         void setProductionRel(int, string, string, float, float, float, float, float, float);
@@ -160,8 +158,7 @@ class RELATORIO {
  */
 class FILTRO {
     public:
-        Filtro(int);
-        ~Filtro();
+        FILTRO(int);
         void setFilters(string,string,string, int, long);
     private:
         int *quant;

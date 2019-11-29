@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
+#include <list>
 #include "ClassDados.h"
-#include "ClassOperations.h"
 using namespace std;
 /* 
     Arquivo com as definições dos métodos das funções
@@ -84,12 +84,9 @@ void CLIENTE::setPurchase(string a = "", string c = "", string h = "", string ob
 }
 void CLIENTE::setFile(string nameFile = "")
 {
-    Anexo = fopen(nameFile);
-    if(Anexo)
-        cout << "Arquivo Aberto. " << endl;
-    else
-        cout << "Arquivo inexistente. " << endl;
-    
+    FILE anexo, *ptr;
+    ptr = &anexo;
+    ptr->Name = nameFile;
 }
 /*
     Métodos get
