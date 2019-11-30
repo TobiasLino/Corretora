@@ -30,6 +30,19 @@ private:
     long CEP;
 };
 /*
+ * Classe de Pedido
+ */
+class PEDIDO {
+public:
+    PEDIDO(CLIENTE, CORRETOR, PRODUTO);
+    void setPrestation();
+private:
+    CLIENTE cliente;
+    CORRETOR corretor;
+    PRODUTO produto;
+    CALENDARIO calendario;
+};
+/*
  * Classe de Dados do Cliente
  */
 class CLIENTE {
@@ -168,6 +181,45 @@ class FILTRO {
         string Pseguro;
         int Pidade;
         long PCPF;
+};
+/*
+ *  Classe de identificação do mês
+ */
+class DATA {
+public:
+    DATA(int,enum Mes,int);
+    friend ostream& operator<<(ostream&, DATA &data);
+private:
+    int dia;
+    enum Mes {
+        Janeiro=1,
+        Fevereiro,
+        Marco,
+        Abril,
+        Maio,
+        junho,
+        Julho,
+        Agosto,
+        Setembro,
+        Outubro,
+        Novembro,
+        Dezembro
+    };
+    Mes mes;  
+    int ano;
+};
+/*
+ * Classes de Prestações
+ */
+class PRESTACAO : public DATA {
+public:
+    PRESTACAO(PRODUTO);
+    void setBegin(int,enum Mes, int);
+    void setEnd();
+    int begin();
+    int end();
+private:
+    DATA dataInicio, dataFinal;
 };
 /* 
  * Classe de Acesso ao Calendário
