@@ -34,7 +34,15 @@ void ENDERECO::getAddress()
             << "Número: " << numero << endl
             << "CEP: " << CEP << endl;
 }
-
+/*
+    ********** PEDEIDO **********
+*/
+PEDIDO::PEDIDO(CLIENTE cl, CORRETOR co, PRODUTO po)
+{
+    this.cliente = cl;
+    this.corretor = co;
+    this.produto = po;
+}
 /*
     ********* Client ********    
 */
@@ -382,4 +390,24 @@ void setProductQuant()
 void setNewProduct(int vezes)
 {
 
+}
+
+/*
+    ********** DATA *********
+
+    Constrói uma classe com formato de data
+    dia está como inteiro, os meses estão em formato enumerado, e o ano está como inteiro também
+    Será a classe que fará o formato para a classe prestação e calendário.
+
+*/
+DATA::DATA(int d = 0, enum Mes m, int a = 0)
+{
+    dia = d;
+    mes = m;
+    ano = a;
+}
+ostream& operator<<(ostream& out, DATA &data)
+{
+    out << "Dia: " << data.dia << ", Mes: " << data.mes << ", ano: " << data.ano;
+    return out;
 }
