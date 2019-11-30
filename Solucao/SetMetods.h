@@ -400,14 +400,79 @@ void setNewProduct(int vezes)
     Será a classe que fará o formato para a classe prestação e calendário.
 
 */
-DATA::DATA(int d = 0, enum Mes m, int a = 0)
+DATA::DATA(int d = 0,Mes m, int a = 0)
 {
     dia = d;
     mes = m;
     ano = a;
 }
+/*
+    Operador pra poder realizar opções como cout << data << endl;
+*/
 ostream& operator<<(ostream& out, DATA &data)
 {
     out << "Dia: " << data.dia << ", Mes: " << data.mes << ", ano: " << data.ano;
     return out;
+}
+/*
+    ********** PRESTAÇÕES *********
+
+    Constrói uma classe que definirá as prestações do produto vendido
+    uma para cada mês de acordo com a classes data
+
+*/
+PRESTACAO::PRESTACAO(PEDIDO prod)
+{
+    prestation = prod.getPrestation();
+}
+/*
+    Define qual o dia da primeira prestação
+*/
+void PRESTACAO::setBegin(int d, Mes m, int a)
+{
+   dataInicio = new DATA(d,m,a);
+}
+/*
+    Define o dia da última prestação
+*/
+void PRESTACAO::setEnd(int d, Mes m, int a)
+{
+    dataFinal = new DATA(d,m,a);
+}
+/*
+    Imprime todas as prestações
+*/
+void PRESTACAO::getAllPrestations()
+{
+    int i=0;        // variável de iteração
+    DATA *proxima;     // ponteiro para a próxima prestação
+    proxima = &dataInicio;  // recebe a primeira prestação
+    for(i=0;i<=prestation;i++)  // calcula a quantidade de prestações
+    {
+        // usa um método de excessões para retornar se a operação funcionou
+        try {
+            cout << proxima << endl;    // imprime a primeira data
+            if(dataInicio.getMonth() >12) {                                                                               //  faz a verificação de ano, se o mês passar de 12
+                proxima = new DATA(dataInicio.getDay(), dataInicio.getMonth()=Janeiro, dataInicio.getYear()+1); }         //  adiciona um ano ao ponteiro proxima
+            else { proxima = new DATA(dataInicio.getDay(), dataInicio.getMonth()+1, dataInicio.getYear()); }              //  ccertifica que os meses estarão aumentando
+        }                                                                                                       
+        catch {
+            cout << "Erro " << endl;       // retorna a mensagem de erro para o terminal
+        }   
+    }
+    delete proxima;         // finaliza o método destruindo o ponteiro proxima
+}
+/*
+    Imprime a primeira 
+*/
+void PRESTACAO::getBegin()
+{
+    cout << dataInicio << endl;
+}
+/*
+    Imprime a última
+*/
+void PRESTACAO::getEnd()
+{
+    cout << dataFinal << endl;
 }

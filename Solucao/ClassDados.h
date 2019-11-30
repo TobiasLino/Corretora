@@ -11,8 +11,13 @@ using namespace std;
  * !!!!!!!!!!!!!1É necessário salvar os dados inseridos em um arquivo.!!!!!!!!!!!!!!
 */
 /*
+    Tipo enumerado para salvar o mês
+*/
+enum Mes { Janeiro=1,Fevereiro,Marco,Abril,Maio,junho,Julho,Agosto,Setembro,Outubro,Novembro,Dezembro };
+/*
  * Classe File para arquivos anexados
 */
+
 class FILE {};
 /*
  * Classe endereço, comum a cliente e corretor
@@ -36,11 +41,13 @@ class PEDIDO {
 public:
     PEDIDO(CLIENTE, CORRETOR, PRODUTO);
     void setPrestation();
+    int getPrestation(){return prestations;}
 private:
     CLIENTE cliente;
     CORRETOR corretor;
     PRODUTO produto;
     CALENDARIO calendario;
+    int prestations;
 };
 /*
  * Classe de Dados do Cliente
@@ -121,6 +128,7 @@ class PRODUTO {
         void setValues(float, float, float, string, string, string);
         void setFile(string);
         void getProduct();
+        int getPrestation(){return prestacoes;};
     private:
         int ID;
         // Informações Básicas
@@ -187,24 +195,14 @@ class FILTRO {
  */
 class DATA {
 public:
-    DATA(int,enum Mes,int);
+    DATA(int,Mes,int);
+    int getDay(){return dia;}
+    int getMonth(return mes;)
+    int getYear(){return ano;}
     friend ostream& operator<<(ostream&, DATA &data);
 private:
     int dia;
-    enum Mes {
-        Janeiro=1,
-        Fevereiro,
-        Marco,
-        Abril,
-        Maio,
-        junho,
-        Julho,
-        Agosto,
-        Setembro,
-        Outubro,
-        Novembro,
-        Dezembro
-    };
+    
     Mes mes;  
     int ano;
 };
@@ -214,12 +212,14 @@ private:
 class PRESTACAO : public DATA {
 public:
     PRESTACAO(PRODUTO);
-    void setBegin(int,enum Mes, int);
-    void setEnd();
-    int begin();
-    int end();
+    void setBegin(int,Mes, int);
+    void setEnd(int, Mes, int);
+    void getAllPrestations();
+    void getBegin();
+    void getEnd();
 private:
-    DATA dataInicio, dataFinal;
+    DATA dataInicio, dataFinal; // data inicio e final
+    int prestation;     // total de prestações 
 };
 /* 
  * Classe de Acesso ao Calendário
