@@ -1,23 +1,32 @@
+/**
+ * @autor <TOBIAS DA SILVA LINO>
+ * @brief Arquivo com as definições dos métodos das funções
+ * @details 
+ *  Modifica o que cada método faz dentro das funções, foi criado neste arquivo
+ *  com o objetivo de focar no mais importante dentro do arquivo de classes principal.
+ */
 #include <iostream>
 #include <string>
 #include <list>
 #include "ClassDados.h"
 using namespace std;
-/* 
-    Arquivo com as definições dos métodos das funções
-*/ 
-/*
- 
-
-    CLASSES
-
-
-*/
-/*
-    ********* Endereço *********
-*/
-ENDERECO::ENDERECO(string r = "", string b = "", string com = "", string cid = "", int n = 0, long c = 0)   // cria a instância com valores default
+/**
+ *  @brief Classe contendo a construção do Endereço
+ */
+ENDERECO::ENDERECO(string r = "", string b = "", string com = "", string cid = "", int n = 0, long c = 0)   /// cria a instância com valores default
 {
+    /** @details
+     *  Constroi a instancia ENDERECO com valores default nulos
+     *  onde o sistema irá carregá-los na memória
+     * @param ENDERECO     Construtor principal
+     * @param rua          Rua a ser inserida
+     * @param Bairro       Bairro a ser inserido
+     * @param Complemento  Complemento, se houver
+     * @param Cidade       Cidade a ser inserida
+     * @param numero       Numero da casa
+     * @param CEP          CEP da Rua
+     * @return             Constroi uma instancia da classe ENDERECO com os parametros passados
+    */
     Rua = r;
     Bairro = b;
     Complemento = com;
@@ -34,8 +43,8 @@ void ENDERECO::getAddress()
             << "Número: " << numero << endl
             << "CEP: " << CEP << endl;
 }
-/*
-    ********** PEDEIDO **********
+/**
+    ********** PEDIDO **********
 */
 PEDIDO::PEDIDO(CLIENTE cl, CORRETOR co, PRODUTO po)
 {
@@ -43,11 +52,11 @@ PEDIDO::PEDIDO(CLIENTE cl, CORRETOR co, PRODUTO po)
     this.corretor = co;
     this.produto = po;
 }
-/*
+/**
     ********* Client ********    
 */
-// Construtor
-CLIENTE::CLIENTE(string n = "", string p = "", string ec = "", string s = "", string pr = "", string dp = "", int* nasc=0, long cpf = 0, long rg = 0, long CNH = 0)   // cria a instância com valores default
+/// Construtor
+CLIENTE::CLIENTE(string n = "", string p = "", string ec = "", string s = "", string pr = "", string dp = "", int* nasc=0, long cpf = 0, long rg = 0, long CNH = 0)   /// cria a instância com valores default
 {
     nome = n;
     pessoa = p;
@@ -60,10 +69,10 @@ CLIENTE::CLIENTE(string n = "", string p = "", string ec = "", string s = "", st
     RG = rg;
     CNH = cnh;
 }
-/*
+/**
     métodos set
 */
-void CLIENTE::setAddress(string r = "", string b = "", string com = "", string cid = "", int n = 0, long c = 0)   // cria a instância com valores default
+void CLIENTE::setAddress(string r = "", string b = "", string com = "", string cid = "", int n = 0, long c = 0)   /// cria a instância com valores default
 {
     ENDERECO *ptr;
     ptr = &this.endereco;
@@ -74,7 +83,7 @@ void CLIENTE::setAddress(string r = "", string b = "", string com = "", string c
     ptr->numero = n;
     ptr->CEP = c;
 }
-void CLIENTE::setContact(string t = "", string e = "")   // cria a instância com valores default
+void CLIENTE::setContact(string t = "", string e = "")   /// cria a instância com valores default
 {
     telefone = t;
     email = e;
