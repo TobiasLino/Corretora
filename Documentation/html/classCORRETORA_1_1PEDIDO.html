@@ -73,11 +73,16 @@ $(function() {
 <div class="title">CORRETORA::PEDIDO Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe que registra o pedido, mesclando cliente, produto e corretor.  
+ <a href="classCORRETORA_1_1PEDIDO.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="ClassDados_8h_source.html">ClassDados.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa3f8c67d6b2d6215bcdd0d462c9acac9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCORRETORA_1_1PEDIDO.html#aa3f8c67d6b2d6215bcdd0d462c9acac9">PEDIDO</a> (CLIENTE, CORRETOR, PRODUTO)</td></tr>
-<tr class="separator:aa3f8c67d6b2d6215bcdd0d462c9acac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b34d05f94c08b293a10610d3a32d85f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCORRETORA_1_1PEDIDO.html#a4b34d05f94c08b293a10610d3a32d85f">PEDIDO</a> (<a class="el" href="classCORRETORA_1_1CADASTRO_1_1CLIENTE.html">CADASTRO::CLIENTE</a>, <a class="el" href="classCORRETORA_1_1CADASTRO_1_1CORRETOR.html">CADASTRO::CORRETOR</a>, <a class="el" href="classCORRETORA_1_1CADASTRO_1_1PRODUTO.html">CADASTRO::PRODUTO</a>)</td></tr>
+<tr class="separator:a4b34d05f94c08b293a10610d3a32d85f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17034937d79b6bfb6133fd1adfd749ac"><td class="memItemLeft" align="right" valign="top"><a id="a17034937d79b6bfb6133fd1adfd749ac"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setPrestation</b> ()</td></tr>
 <tr class="separator:a17034937d79b6bfb6133fd1adfd749ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -85,9 +90,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setPrestation</b> ()<
 int&#160;</td><td class="memItemRight" valign="bottom"><b>getPrestation</b> ()</td></tr>
 <tr class="separator:a96212d7cc7db171d5eb67bf7700cd2fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aa3f8c67d6b2d6215bcdd0d462c9acac9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3f8c67d6b2d6215bcdd0d462c9acac9">&#9670;&nbsp;</a></span>PEDIDO()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Classe que registra o pedido, mesclando cliente, produto e corretor. </p>
+<p>Aqui se encontra a solução para um sistema de corretora de seguros, onde é necessário realizar o cadastro dos clientes, dos produtos e dos corretores. Também é necessário gerar relatórios, realizar pesquisas com filtros, gerenciar operações com calendário(verificar os pagamentos do dia selecionado etc.) e realizar operações de telemarketing(envio de emails programado).</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>É necessário salvar os dados inseridos em um arquivo. </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a4b34d05f94c08b293a10610d3a32d85f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b34d05f94c08b293a10610d3a32d85f">&#9670;&nbsp;</a></span>PEDIDO()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -95,20 +104,20 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>getPrestation</b> ()</
         <tr>
           <td class="memname">PEDIDO::PEDIDO </td>
           <td>(</td>
-          <td class="paramtype">CLIENTE&#160;</td>
-          <td class="paramname"><em>cl</em>, </td>
+          <td class="paramtype"><a class="el" href="classCORRETORA_1_1CADASTRO_1_1CLIENTE.html">CADASTRO::CLIENTE</a>&#160;</td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">CORRETOR&#160;</td>
-          <td class="paramname"><em>co</em>, </td>
+          <td class="paramtype"><a class="el" href="classCORRETORA_1_1CADASTRO_1_1CORRETOR.html">CADASTRO::CORRETOR</a>&#160;</td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">PRODUTO&#160;</td>
-          <td class="paramname"><em>po</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="classCORRETORA_1_1CADASTRO_1_1PRODUTO.html">CADASTRO::PRODUTO</a>&#160;</td>
+          <td class="paramname">&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -117,7 +126,19 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>getPrestation</b> ()</
         </tr>
       </table>
 </div><div class="memdoc">
-<p><a class="el" href="classCORRETORA_1_1PEDIDO.html">PEDIDO</a> ********** </p>
+<p>Registra o pedido como mediador, anexando as informações do cliente, produto e corretor, bem como as prestações, no calendário. O usuário pode obter todas as informações e imprimi-las na tela. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="classCORRETORA_1_1PEDIDO.html" title="Classe que registra o pedido, mesclando cliente, produto e corretor.">PEDIDO</a></td><td>Construtor principal </td></tr>
+    <tr><td class="paramname">CLIENTE</td><td>Instância de CLIENTE </td></tr>
+    <tr><td class="paramname">CORRETOR</td><td>Instância de CORRETOR </td></tr>
+    <tr><td class="paramname">PRODUTO</td><td>Instância de PRODUTO </td></tr>
+    <tr><td class="paramname">CALENDARIO</td><td>Instância de CALENDARIO(cria as prestações) </td></tr>
+    <tr><td class="paramname">prestations</td><td>Número de Prestações </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Registro do pedido</dd></dl>
+<p><a class="el" href="classCORRETORA_1_1PEDIDO.html" title="Classe que registra o pedido, mesclando cliente, produto e corretor.">PEDIDO</a> ********** </p>
 
 </div>
 </div>

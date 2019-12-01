@@ -15,18 +15,6 @@ using namespace std;
  */
 ENDERECO::ENDERECO(string r = "", string b = "", string com = "", string cid = "", int n = 0, long c = 0)   /// cria a instância com valores default
 {
-    /** @details
-     *  Constroi a instancia ENDERECO com valores default nulos
-     *  onde o sistema irá carregá-los na memória
-     * @param ENDERECO     Construtor principal
-     * @param rua          Rua a ser inserida
-     * @param Bairro       Bairro a ser inserido
-     * @param Complemento  Complemento, se houver
-     * @param Cidade       Cidade a ser inserida
-     * @param numero       Numero da casa
-     * @param CEP          CEP da Rua
-     * @return             Constroi uma instancia da classe ENDERECO com os parametros passados
-    */
     Rua = r;
     Bairro = b;
     Complemento = com;
@@ -72,6 +60,11 @@ CLIENTE::CLIENTE(string n = "", string p = "", string ec = "", string s = "", st
 /**
     métodos set
 */
+void CLIENTE::setContact(string t = "", string e = "")   /// cria a instância com valores default
+{
+    telefone = t;
+    email = e;
+}
 void CLIENTE::setAddress(string r = "", string b = "", string com = "", string cid = "", int n = 0, long c = 0)   /// cria a instância com valores default
 {
     ENDERECO *ptr;
@@ -82,11 +75,6 @@ void CLIENTE::setAddress(string r = "", string b = "", string com = "", string c
     ptr->Cidade = cid;
     ptr->numero = n;
     ptr->CEP = c;
-}
-void CLIENTE::setContact(string t = "", string e = "")   /// cria a instância com valores default
-{
-    telefone = t;
-    email = e;
 }
 void CLIENTE::setPurchase(string a = "", string c = "", string h = "", string obs = "", string indx = "", string indxyz = "", string rf = "", int r = 0)    // cria a instância com valores default
 {
