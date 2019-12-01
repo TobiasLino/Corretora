@@ -81,18 +81,19 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af21fa9a9050d5288f51fddbd8e3f2cbf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCORRETORA_1_1COMUNS_1_1ENDERECO.html#af21fa9a9050d5288f51fddbd8e3f2cbf">ENDERECO</a> (string r, string b, string com, string cid, int n, long c)</td></tr>
-<tr class="memdesc:af21fa9a9050d5288f51fddbd8e3f2cbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classe contendo a construção do Endereço.  <a href="classCORRETORA_1_1COMUNS_1_1ENDERECO.html#af21fa9a9050d5288f51fddbd8e3f2cbf">More...</a><br /></td></tr>
-<tr class="separator:af21fa9a9050d5288f51fddbd8e3f2cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0490bde2b4d6a31f2b3129b0f910d3d9"><td class="memItemLeft" align="right" valign="top"><a id="a0490bde2b4d6a31f2b3129b0f910d3d9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>getAddress</b> ()</td></tr>
+<tr class="memitem:a3628ab608d6df1c59a55ab665683d0e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCORRETORA_1_1COMUNS_1_1ENDERECO.html#a3628ab608d6df1c59a55ab665683d0e9">ENDERECO</a> (string, string, string, string, int, long)</td></tr>
+<tr class="memdesc:a3628ab608d6df1c59a55ab665683d0e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor ENDEREÇO.  <a href="classCORRETORA_1_1COMUNS_1_1ENDERECO.html#a3628ab608d6df1c59a55ab665683d0e9">More...</a><br /></td></tr>
+<tr class="separator:a3628ab608d6df1c59a55ab665683d0e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0490bde2b4d6a31f2b3129b0f910d3d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCORRETORA_1_1COMUNS_1_1ENDERECO.html#a0490bde2b4d6a31f2b3129b0f910d3d9">getAddress</a> ()</td></tr>
+<tr class="memdesc:a0490bde2b4d6a31f2b3129b0f910d3d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método get do endereço.  <a href="classCORRETORA_1_1COMUNS_1_1ENDERECO.html#a0490bde2b4d6a31f2b3129b0f910d3d9">More...</a><br /></td></tr>
 <tr class="separator:a0490bde2b4d6a31f2b3129b0f910d3d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Classe endereço, comum a cliente e corretor. </p>
+<p>Define os dados para endereço e os atribui a suas variáveis correspondentes. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="af21fa9a9050d5288f51fddbd8e3f2cbf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af21fa9a9050d5288f51fddbd8e3f2cbf">&#9670;&nbsp;</a></span>ENDERECO()</h2>
+<a id="a3628ab608d6df1c59a55ab665683d0e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3628ab608d6df1c59a55ab665683d0e9">&#9670;&nbsp;</a></span>ENDERECO()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -141,21 +142,42 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>getAddress</b> ()</td
       </table>
 </div><div class="memdoc">
 
-<p>Classe contendo a construção do Endereço. </p>
-<p>cria a instância com valores default </p>
-<p>Constroi a instancia <a class="el" href="classCORRETORA_1_1COMUNS_1_1ENDERECO.html" title="Classe endereço, comum a cliente e corretor.">ENDERECO</a> com valores default nulos onde o sistema irá carregá-los na memória </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Construtor ENDEREÇO. </p>
+<p>Classe contendo a construção do Endereço.</p>
+<p>Constrói uma instância da classe. Se estiver vazia, cria com parâmetros default. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="classCORRETORA_1_1COMUNS_1_1ENDERECO.html" title="Classe endereço, comum a cliente e corretor.">ENDERECO</a></td><td>Construtor principal </td></tr>
-    <tr><td class="paramname">rua</td><td>Rua a ser inserida </td></tr>
-    <tr><td class="paramname">Bairro</td><td>Bairro a ser inserido </td></tr>
-    <tr><td class="paramname">Complemento</td><td>Complemento, se houver </td></tr>
-    <tr><td class="paramname">Cidade</td><td>Cidade a ser inserida </td></tr>
-    <tr><td class="paramname">numero</td><td>Numero da casa </td></tr>
-    <tr><td class="paramname">CEP</td><td>CEP da Rua </td></tr>
+    <tr><td class="paramname">r</td><td>Rua a ser inserida </td></tr>
+    <tr><td class="paramname">b</td><td>Bairro a ser inserido </td></tr>
+    <tr><td class="paramname">com</td><td>Complemento, se houver </td></tr>
+    <tr><td class="paramname">cid</td><td>Cidade a ser inserida </td></tr>
+    <tr><td class="paramname">n</td><td>Numero da casa </td></tr>
+    <tr><td class="paramname">c</td><td>CEP da Rua </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Constroi uma instancia da classe <a class="el" href="classCORRETORA_1_1COMUNS_1_1ENDERECO.html" title="Classe endereço, comum a cliente e corretor.">ENDERECO</a> com os parametros passados</dd></dl>
+<p>cria a instância com valores default </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0490bde2b4d6a31f2b3129b0f910d3d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0490bde2b4d6a31f2b3129b0f910d3d9">&#9670;&nbsp;</a></span>getAddress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ENDERECO::getAddress </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método get do endereço. </p>
+<dl class="section return"><dt>Returns</dt><dd>Imprime o endereço no terminal. </dd></dl>
 
 </div>
 </div>

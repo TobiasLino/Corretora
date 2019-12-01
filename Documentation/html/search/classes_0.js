@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['binaryord_27',['BinaryOrd',['../classBinaryOrd.html',1,'']]],
-  ['binarysearchtree_28',['BinarySearchTree',['../classBinarySearchTree.html',1,'']]]
+  ['binaryord_28',['BinaryOrd',['../classBinaryOrd.html',1,'']]],
+  ['binarysearchtree_29',['BinarySearchTree',['../classBinarySearchTree.html',1,'']]]
 ];
