@@ -86,65 +86,64 @@ $(function() {
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * Contém as classes de ordenação, pesquisa e salvar,acessar e remover no arquivo</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * </span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> </span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> ********** CLASSES *********</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>SYSTEM_OPERATIONS {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">    </span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">    ********** CLASSES *********</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Type&gt;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classLISTA.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLISTA.html">LISTA</a> {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classLISTA.html">LISTA</a>();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> add();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> remove();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> search();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    list&lt;Type&gt; Lista; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classStack.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStack.html">Stack</a> {};</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classTree.html">   36</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTree.html">Tree</a> {};</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classOrdenation.html">   37</a></span>&#160;<span class="keyword">class </span><a class="code" href="classOrdenation.html">Ordenation</a>{};</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classBinaryOrd.html">   38</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBinaryOrd.html">BinaryOrd</a> {};</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classBinarySearchTree.html">   39</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBinarySearchTree.html">BinarySearchTree</a> {};</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classGetFromFile.html">   40</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGetFromFile.html">GetFromFile</a> {};</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classQuicksort.html">   41</a></span>&#160;<span class="keyword">class </span><a class="code" href="classQuicksort.html">Quicksort</a> {};</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"> </span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">  </span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment"> </span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment"> **********  PROTÓTIPOS DAS FUNÇÕES **********</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">  </span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">  </span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">  </span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">void</span> setClientQuant(); <span class="comment">// Define os parâmetros de inicialização dos objetos de cliente</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">void</span> setNewClient(<span class="keywordtype">int</span>); <span class="comment">// Adiciona novos clientes</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">void</span> setBrokerQuant(); <span class="comment">// Define os Parâmetros de inicialização dos objetos de Corretor</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordtype">void</span> setNewBroker(<span class="keywordtype">int</span>); <span class="comment">// Adiciona novos Corretores</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">void</span> setProductQuant(); <span class="comment">// Define os parâmetros de inicialização dos objetos de Produto</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> setNewProduct(<span class="keywordtype">int</span>); <span class="comment">// Adiciona novos Produtos</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">void</span> OrdinFIle(<span class="keywordtype">char</span>*);  <span class="comment">// Ordena as classes no arquivo</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">void</span> SeCinF(<span class="keywordtype">char</span>*); <span class="comment">// Pesquisa as classes no arquivo</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keywordtype">void</span> SeSinF(<span class="keywordtype">char</span>*); <span class="comment">// Pesquisa as Strings dentro dos dados das classes</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">void</span> SaCtoFile(<span class="keywordtype">char</span>*, <a class="code" href="classCADASTRO_1_1CLIENTE.html">CLIENTE</a> x); <span class="comment">// Salva o Cliente no Arquivo </span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordtype">void</span> SaBtoFile(<span class="keywordtype">char</span>*, <a class="code" href="classCADASTRO_1_1CORRETOR.html">CORRETOR</a> x); <span class="comment">// Salva o corretor no arquivo</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keywordtype">void</span> SaPtoFile(<span class="keywordtype">char</span>*, <a class="code" href="classCADASTRO_1_1PRODUTO.html">PRODUTO</a> x); <span class="comment">// Salva o produto no arquivo</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keywordtype">void</span> saReltoFile(<span class="keywordtype">char</span>*, <a class="code" href="classCADASTRO_1_1PRODUTO.html">PRODUTO</a> x); <span class="comment">// Salva o relatório no arquivo</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> Type&gt;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classSYSTEM__OPERATIONS_1_1LISTA.html">   26</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classSYSTEM__OPERATIONS_1_1LISTA.html">LISTA</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="classSYSTEM__OPERATIONS_1_1LISTA.html">LISTA</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">void</span> add();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">void</span> remove();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">void</span> search();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        list&lt;Type&gt; Lista; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    };</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classSYSTEM__OPERATIONS_1_1Stack.html">   36</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classSYSTEM__OPERATIONS_1_1Stack.html">Stack</a> {};</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classSYSTEM__OPERATIONS_1_1Tree.html">   37</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classSYSTEM__OPERATIONS_1_1Tree.html">Tree</a> {};</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classSYSTEM__OPERATIONS_1_1Ordenation.html">   38</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classSYSTEM__OPERATIONS_1_1Ordenation.html">Ordenation</a>{};</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classSYSTEM__OPERATIONS_1_1BinaryOrd.html">   39</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classSYSTEM__OPERATIONS_1_1BinaryOrd.html">BinaryOrd</a> {};</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classSYSTEM__OPERATIONS_1_1BinarySearchTree.html">   40</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classSYSTEM__OPERATIONS_1_1BinarySearchTree.html">BinarySearchTree</a> {};</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classSYSTEM__OPERATIONS_1_1GetFromFile.html">   41</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classSYSTEM__OPERATIONS_1_1GetFromFile.html">GetFromFile</a> {};</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classSYSTEM__OPERATIONS_1_1Quicksort.html">   42</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classSYSTEM__OPERATIONS_1_1Quicksort.html">Quicksort</a> {};</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">    </span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">    </span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">    </span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">    **********  PROTÓTIPOS DAS FUNÇÕES **********</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">    </span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">    </span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">    </span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> setClientQuant(); <span class="comment">// Define os parâmetros de inicialização dos objetos de cliente</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> setNewClient(<span class="keywordtype">int</span>); <span class="comment">// Adiciona novos clientes</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> setBrokerQuant(); <span class="comment">// Define os Parâmetros de inicialização dos objetos de Corretor</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> setNewBroker(<span class="keywordtype">int</span>); <span class="comment">// Adiciona novos Corretores</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> setProductQuant(); <span class="comment">// Define os parâmetros de inicialização dos objetos de Produto</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> setNewProduct(<span class="keywordtype">int</span>); <span class="comment">// Adiciona novos Produtos</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> OrdinFIle(<span class="keywordtype">char</span>*);  <span class="comment">// Ordena as classes no arquivo</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> SeCinF(<span class="keywordtype">char</span>*); <span class="comment">// Pesquisa as classes no arquivo</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> SeSinF(<span class="keywordtype">char</span>*); <span class="comment">// Pesquisa as Strings dentro dos dados das classes</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> SaCtoFile(<span class="keywordtype">char</span>*, CLIENTE x); <span class="comment">// Salva o Cliente no Arquivo </span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> SaBtoFile(<span class="keywordtype">char</span>*, CORRETOR x); <span class="comment">// Salva o corretor no arquivo</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> SaPtoFile(<span class="keywordtype">char</span>*, PRODUTO x); <span class="comment">// Salva o produto no arquivo</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> saReltoFile(<span class="keywordtype">char</span>*, PRODUTO x); <span class="comment">// Salva o relatório no arquivo</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassBinaryOrd_html"><div class="ttname"><a href="classBinaryOrd.html">BinaryOrd</a></div><div class="ttdef"><b>Definition:</b> ClassOperations.h:38</div></div>
-<div class="ttc" id="aclassOrdenation_html"><div class="ttname"><a href="classOrdenation.html">Ordenation</a></div><div class="ttdef"><b>Definition:</b> ClassOperations.h:37</div></div>
-<div class="ttc" id="aclassQuicksort_html"><div class="ttname"><a href="classQuicksort.html">Quicksort</a></div><div class="ttdef"><b>Definition:</b> ClassOperations.h:41</div></div>
-<div class="ttc" id="aclassTree_html"><div class="ttname"><a href="classTree.html">Tree</a></div><div class="ttdef"><b>Definition:</b> ClassOperations.h:36</div></div>
-<div class="ttc" id="aclassGetFromFile_html"><div class="ttname"><a href="classGetFromFile.html">GetFromFile</a></div><div class="ttdef"><b>Definition:</b> ClassOperations.h:40</div></div>
-<div class="ttc" id="aclassCADASTRO_1_1CLIENTE_html"><div class="ttname"><a href="classCADASTRO_1_1CLIENTE.html">CADASTRO::CLIENTE</a></div><div class="ttdoc">Classe de Dados do Cliente.</div><div class="ttdef"><b>Definition:</b> ClassDados.h:100</div></div>
-<div class="ttc" id="aclassLISTA_html"><div class="ttname"><a href="classLISTA.html">LISTA</a></div><div class="ttdef"><b>Definition:</b> ClassOperations.h:25</div></div>
-<div class="ttc" id="aclassCADASTRO_1_1CORRETOR_html"><div class="ttname"><a href="classCADASTRO_1_1CORRETOR.html">CADASTRO::CORRETOR</a></div><div class="ttdef"><b>Definition:</b> ClassDados.h:173</div></div>
-<div class="ttc" id="aclassBinarySearchTree_html"><div class="ttname"><a href="classBinarySearchTree.html">BinarySearchTree</a></div><div class="ttdef"><b>Definition:</b> ClassOperations.h:39</div></div>
-<div class="ttc" id="aclassStack_html"><div class="ttname"><a href="classStack.html">Stack</a></div><div class="ttdef"><b>Definition:</b> ClassOperations.h:35</div></div>
-<div class="ttc" id="aclassCADASTRO_1_1PRODUTO_html"><div class="ttname"><a href="classCADASTRO_1_1PRODUTO.html">CADASTRO::PRODUTO</a></div><div class="ttdef"><b>Definition:</b> ClassDados.h:196</div></div>
+<div class="ttc" id="aclassSYSTEM__OPERATIONS_1_1Tree_html"><div class="ttname"><a href="classSYSTEM__OPERATIONS_1_1Tree.html">SYSTEM_OPERATIONS::Tree</a></div><div class="ttdef"><b>Definition:</b> ClassOperations.h:37</div></div>
+<div class="ttc" id="aclassSYSTEM__OPERATIONS_1_1Quicksort_html"><div class="ttname"><a href="classSYSTEM__OPERATIONS_1_1Quicksort.html">SYSTEM_OPERATIONS::Quicksort</a></div><div class="ttdef"><b>Definition:</b> ClassOperations.h:42</div></div>
+<div class="ttc" id="aclassSYSTEM__OPERATIONS_1_1Stack_html"><div class="ttname"><a href="classSYSTEM__OPERATIONS_1_1Stack.html">SYSTEM_OPERATIONS::Stack</a></div><div class="ttdef"><b>Definition:</b> ClassOperations.h:36</div></div>
+<div class="ttc" id="aclassSYSTEM__OPERATIONS_1_1BinarySearchTree_html"><div class="ttname"><a href="classSYSTEM__OPERATIONS_1_1BinarySearchTree.html">SYSTEM_OPERATIONS::BinarySearchTree</a></div><div class="ttdef"><b>Definition:</b> ClassOperations.h:40</div></div>
+<div class="ttc" id="aclassSYSTEM__OPERATIONS_1_1BinaryOrd_html"><div class="ttname"><a href="classSYSTEM__OPERATIONS_1_1BinaryOrd.html">SYSTEM_OPERATIONS::BinaryOrd</a></div><div class="ttdef"><b>Definition:</b> ClassOperations.h:39</div></div>
+<div class="ttc" id="aclassSYSTEM__OPERATIONS_1_1GetFromFile_html"><div class="ttname"><a href="classSYSTEM__OPERATIONS_1_1GetFromFile.html">SYSTEM_OPERATIONS::GetFromFile</a></div><div class="ttdef"><b>Definition:</b> ClassOperations.h:41</div></div>
+<div class="ttc" id="aclassSYSTEM__OPERATIONS_1_1LISTA_html"><div class="ttname"><a href="classSYSTEM__OPERATIONS_1_1LISTA.html">SYSTEM_OPERATIONS::LISTA</a></div><div class="ttdef"><b>Definition:</b> ClassOperations.h:26</div></div>
+<div class="ttc" id="aclassSYSTEM__OPERATIONS_1_1Ordenation_html"><div class="ttname"><a href="classSYSTEM__OPERATIONS_1_1Ordenation.html">SYSTEM_OPERATIONS::Ordenation</a></div><div class="ttdef"><b>Definition:</b> ClassOperations.h:38</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

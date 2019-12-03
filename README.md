@@ -5,3 +5,34 @@
    O sistema deverá emitir relatórios, enviar emails e	fazer pesquisa de cliente, sendo aplicado múltiplos filtros para tal pesquisa.
  ###Detalhes
  	Aqui se encontra a solução para um sistema de corretora de seguros, onde é necessário realizar o cadastro dos clientes, dos produtos e dos corretores. Também é necessário gerar relatórios, realizar pesquisas com filtros, gerenciar operações com calendário(verificar os pagamentos do dia selecionado etc.) e realizar operações de telemarketing(envio de emails programado).
+
+ ###NAMESPACES
+    CADASTRO
+        PEDIDO
+        CLIENTE
+        CORRETOR
+        PRODUTO
+    COMUNS
+        ENDERECO
+        PESSOA
+    USER_OPERATIONS
+        CALENDARIO
+        DATA
+        FILTRO
+        HISTORICO
+        PRESTACAO
+        RELATORIO
+        TELEMARKETING
+    UTILS
+        FILE
+    SYSTEM_OPERATIONS
+        BinaryOrd
+        BinarySearchTree
+        GetFromFile
+        LISTA
+        Ordenation
+        QuickSort
+        Stack
+        Tree
+    
+    

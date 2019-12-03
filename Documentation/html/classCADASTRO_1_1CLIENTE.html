@@ -90,18 +90,18 @@ Inheritance diagram for CADASTRO::CLIENTE:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a26ddd335ac01cdb1cc18b8eee0c31ce5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCADASTRO_1_1CLIENTE.html#a26ddd335ac01cdb1cc18b8eee0c31ce5">CLIENTE</a> (string, string, string, string, string, string, int *, long, long, long)</td></tr>
-<tr class="memdesc:a26ddd335ac01cdb1cc18b8eee0c31ce5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor de Cliente.  <a href="classCADASTRO_1_1CLIENTE.html#a26ddd335ac01cdb1cc18b8eee0c31ce5">More...</a><br /></td></tr>
-<tr class="separator:a26ddd335ac01cdb1cc18b8eee0c31ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a646bb4f4576be9685719895232c20009"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCADASTRO_1_1CLIENTE.html#a646bb4f4576be9685719895232c20009">CLIENTE</a> (string, string, string, string, string, string, int *, long, long, long, long)</td></tr>
+<tr class="memdesc:a646bb4f4576be9685719895232c20009"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor de Cliente.  <a href="classCADASTRO_1_1CLIENTE.html#a646bb4f4576be9685719895232c20009">More...</a><br /></td></tr>
+<tr class="separator:a646bb4f4576be9685719895232c20009"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fbc59f09c0f64ecaea9a3ee4cb060ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCADASTRO_1_1CLIENTE.html#a5fbc59f09c0f64ecaea9a3ee4cb060ed">setContact</a> (string, string)</td></tr>
 <tr class="memdesc:a5fbc59f09c0f64ecaea9a3ee4cb060ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o contato.  <a href="classCADASTRO_1_1CLIENTE.html#a5fbc59f09c0f64ecaea9a3ee4cb060ed">More...</a><br /></td></tr>
 <tr class="separator:a5fbc59f09c0f64ecaea9a3ee4cb060ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cb6b73f6d5f2ca12dd8595801cd6494"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCADASTRO_1_1CLIENTE.html#a6cb6b73f6d5f2ca12dd8595801cd6494">setAddress</a> (string, string, string, string, int, long)</td></tr>
 <tr class="memdesc:a6cb6b73f6d5f2ca12dd8595801cd6494"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o endereço do cliente.  <a href="classCADASTRO_1_1CLIENTE.html#a6cb6b73f6d5f2ca12dd8595801cd6494">More...</a><br /></td></tr>
 <tr class="separator:a6cb6b73f6d5f2ca12dd8595801cd6494"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1c8505c14098148694c3cbe54e58b2c"><td class="memItemLeft" align="right" valign="top"><a id="ad1c8505c14098148694c3cbe54e58b2c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPurchase</b> (string, string, string, string, string, string, string, int)</td></tr>
-<tr class="separator:ad1c8505c14098148694c3cbe54e58b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a968c25af9d40fcef9dbb0f3e9b327058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCADASTRO_1_1CLIENTE.html#a968c25af9d40fcef9dbb0f3e9b327058">setHistory</a> (USEROPERATIOS::HISTORICO)</td></tr>
+<tr class="memdesc:a968c25af9d40fcef9dbb0f3e9b327058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a relação de dados de compra do cliente.  <a href="classCADASTRO_1_1CLIENTE.html#a968c25af9d40fcef9dbb0f3e9b327058">More...</a><br /></td></tr>
+<tr class="separator:a968c25af9d40fcef9dbb0f3e9b327058"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c3c6538fd7d4097ee00ea27a99964c7"><td class="memItemLeft" align="right" valign="top"><a id="a6c3c6538fd7d4097ee00ea27a99964c7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setFile</b> (string)</td></tr>
 <tr class="separator:a6c3c6538fd7d4097ee00ea27a99964c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,71 +128,77 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>getFullClient</b> ()<
 <div class="textblock"><p>Classe de Dados do Cliente. </p>
 <p>Registro dos dados do cliente, com métodos de acesso às informações privadas. Herda PESSOA. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a26ddd335ac01cdb1cc18b8eee0c31ce5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26ddd335ac01cdb1cc18b8eee0c31ce5">&#9670;&nbsp;</a></span>CLIENTE()</h2>
+<a id="a646bb4f4576be9685719895232c20009"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a646bb4f4576be9685719895232c20009">&#9670;&nbsp;</a></span>CLIENTE()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">CLIENTE::CLIENTE </td>
+          <td class="memname">CADASTRO::CLIENTE::CLIENTE </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>n</em> = <code>&quot;&quot;</code>, </td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>p</em> = <code>&quot;&quot;</code>, </td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>ec</em> = <code>&quot;&quot;</code>, </td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>s</em> = <code>&quot;&quot;</code>, </td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>pr</em> = <code>&quot;&quot;</code>, </td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>dp</em> = <code>&quot;&quot;</code>, </td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>nasc</em> = <code>0</code>, </td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>cpf</em> = <code>0</code>, </td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>rg</em> = <code>0</code>, </td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>CNH</em> = <code>0</code>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname">&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -312,13 +318,39 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>getFullClient</b> ()<
 <p>cria a instância com valores default</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">t</td><td>Telefone </td></tr>
-    <tr><td class="paramname">e</td><td>Email </td></tr>
+    <tr><td class="paramname">string</td><td>t Telefone </td></tr>
+    <tr><td class="paramname">string</td><td>e Email </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Atribui os valores às variáveis de contato</dd></dl>
 <p>métodos set </p>
+
+</div>
+</div>
+<a id="a968c25af9d40fcef9dbb0f3e9b327058"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a968c25af9d40fcef9dbb0f3e9b327058">&#9670;&nbsp;</a></span>setHistory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CADASTRO::CLIENTE::setHistory </td>
+          <td>(</td>
+          <td class="paramtype">USEROPERATIOS::HISTORICO&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define a relação de dados de compra do cliente. </p>
+<p>Adiciona os respectivos dados com realação a associação do cliente com a corretora. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>a Associação do cliente com a corretora </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

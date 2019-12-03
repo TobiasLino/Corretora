@@ -71,253 +71,261 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">enum</span> Mes { Janeiro=1,Fevereiro,Marco,Abril,Maio,junho,Julho,Agosto,Setembro,Outubro,Novembro,Dezembro };</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classPEDIDO.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPEDIDO.html">PEDIDO</a> {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">using namespace </span><a class="code" href="namespaceCADASTRO.html">CADASTRO</a>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classPEDIDO.html">PEDIDO</a>(<a class="code" href="classCADASTRO_1_1CLIENTE.html">CADASTRO::CLIENTE</a>, <a class="code" href="classCADASTRO_1_1CORRETOR.html">CADASTRO::CORRETOR</a>, <a class="code" href="classCADASTRO_1_1PRODUTO.html">CADASTRO::PRODUTO</a>);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> setPrestation();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">int</span> getPrestation(){<span class="keywordflow">return</span> prestations;}</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classCADASTRO_1_1CLIENTE.html">CADASTRO::CLIENTE</a> cliente;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classCADASTRO_1_1CORRETOR.html">CADASTRO::CORRETOR</a> corretor;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classCADASTRO_1_1PRODUTO.html">CADASTRO::PRODUTO</a> produto;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classUSEROPERATIONS_1_1CALENDARIO.html">USEROPERATIONS::CALENDARIO</a> calendario;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">int</span> prestations;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classFILE.html">   45</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFILE.html">FILE</a> {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="namespaceCOMUNS.html">   52</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceCOMUNS.html">COMUNS</a> {</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classCOMUNS_1_1PESSOA.html">   56</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classCOMUNS_1_1PESSOA.html">PESSOA</a>{};</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classCOMUNS_1_1ENDERECO.html">   62</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classCOMUNS_1_1ENDERECO.html">ENDERECO</a> {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="classCOMUNS_1_1ENDERECO.html">ENDERECO</a>(<span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">int</span>, <span class="keywordtype">long</span>);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordtype">void</span> getAddress();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordtype">string</span> Rua;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordtype">string</span> Bairro;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">string</span> Complemento;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">string</span> Cidade;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordtype">int</span> numero;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">long</span> CEP;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    };</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="namespaceCADASTRO.html">   92</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceCADASTRO.html">CADASTRO</a>{</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">using namespace </span>CORRETORA::COMUNS;</div>
-<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classCADASTRO_1_1CLIENTE.html">  100</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classCADASTRO_1_1CLIENTE.html">CLIENTE</a> : <span class="keyword">public</span> <a class="code" href="classCOMUNS_1_1PESSOA.html">COMUNS::PESSOA</a>{</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <a class="code" href="classCADASTRO_1_1CLIENTE.html">CLIENTE</a>(<span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">int</span>*, <span class="keywordtype">long</span>, <span class="keywordtype">long</span>, <span class="keywordtype">long</span>);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordtype">void</span> setContact(<span class="keywordtype">string</span>, <span class="keywordtype">string</span>);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="keywordtype">void</span> setAddress(<span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">int</span>, <span class="keywordtype">long</span>);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <span class="keywordtype">void</span> setPurchase(<span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="keywordtype">void</span> setFile(<span class="keywordtype">string</span>);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="keywordtype">void</span> getName();</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="keywordtype">void</span> getContact();</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            <span class="keywordtype">void</span> getAddres();</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <span class="keywordtype">void</span> getPurchase();</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="keywordtype">void</span> getFIle();</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="keywordtype">void</span> getFullClient();</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <span class="comment">// Informações Básicas</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            <span class="keywordtype">string</span> nome;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="keywordtype">string</span> pessoa;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keywordtype">string</span> EstadoCivil;   <span class="comment">// C(asado), S(olteiro), D(ivorciado), V(iuvo)</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <span class="keywordtype">string</span> sexo;          <span class="comment">// M ou F</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="keywordtype">string</span> profissao;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            <span class="keywordtype">string</span> DocProf;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keywordtype">int</span> nascimento[3];</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="keywordtype">long</span> CPF_CNPJ;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keywordtype">long</span> RG;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="keywordtype">long</span> CNH;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="comment">// Contato</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="keywordtype">string</span> telefone;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keywordtype">string</span> email;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="comment">// Endereço</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            ENDERECO endereco;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="comment">// Demais dados</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <span class="keywordtype">string</span> AssociacaoAMMG;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <span class="keywordtype">string</span> Corretor;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <span class="keywordtype">string</span> Historico;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="keywordtype">string</span> Observacoes;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="keywordtype">string</span> IndicacaoX;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="keywordtype">string</span> IndicouXYZ;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keywordtype">string</span> RelacaoFamiliar;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keywordtype">int</span> Renda;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="comment">// Anexo</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            <span class="keywordtype">string</span> Anexo;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    };</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="comment">    * Classe de Dados do Corretor</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="classCADASTRO_1_1CORRETOR.html">  173</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classCADASTRO_1_1CORRETOR.html">CORRETOR</a> : <span class="keyword">public</span> <a class="code" href="classCOMUNS_1_1PESSOA.html">COMUNS::PESSOA</a> {</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <a class="code" href="classCADASTRO_1_1CORRETOR.html">CORRETOR</a>();</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <span class="keywordtype">void</span> setBroker(<span class="keywordtype">string</span>, <span class="keywordtype">int</span>, <span class="keywordtype">long</span>);</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keywordtype">void</span> setContact(<span class="keywordtype">string</span>, <span class="keywordtype">string</span>);</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <span class="keywordtype">void</span> setAddres(<span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">int</span>, <span class="keywordtype">long</span>);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="keywordtype">void</span> getName();</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <span class="keywordtype">void</span> getAddress();</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="keywordtype">void</span> getBroker();</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <span class="comment">// Informações Básicas</span></div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            <span class="keywordtype">string</span> Nome;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <span class="keywordtype">int</span> type;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="keywordtype">long</span> CPF_CNPJ;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            <span class="comment">// Contato</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <span class="keywordtype">string</span> email;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            <span class="keywordtype">string</span> telefone;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="comment">// Endereço</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            ENDERECO endereco;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    };</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="comment">    * Classe de Dados de Produto</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="classCADASTRO_1_1PRODUTO.html">  196</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classCADASTRO_1_1PRODUTO.html">PRODUTO</a> {</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <a class="code" href="classCADASTRO_1_1PRODUTO.html">PRODUTO</a>(<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="keywordtype">int</span> setID(<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            <span class="keywordtype">void</span> setProduct(<span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">float</span>, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <span class="keywordtype">void</span> setValues(<span class="keywordtype">float</span>, <span class="keywordtype">float</span>, <span class="keywordtype">float</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>);</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="keywordtype">void</span> setFile(<span class="keywordtype">string</span>);</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <span class="keywordtype">void</span> getProduct();</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            <span class="keywordtype">int</span> getPrestation(){<span class="keywordflow">return</span> prestacoes;};</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            <span class="keywordtype">int</span> ID;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <span class="comment">// Informações Básicas</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <span class="keywordtype">string</span> Seguradora;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <span class="keywordtype">string</span> Ramo;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            <span class="keywordtype">string</span> Nome;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            <span class="keywordtype">string</span> Corretor;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            <span class="keywordtype">string</span> Vigencia;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <span class="keywordtype">string</span> Agenciamento;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            <span class="keywordtype">float</span> Comissao;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            <span class="keywordtype">int</span> Tipo;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <span class="comment">// Valores</span></div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            <span class="keywordtype">float</span> premio;</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="keywordtype">float</span> comissionamento;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            <span class="keywordtype">float</span> capitalsegurado;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            <span class="keywordtype">string</span> Veiculo;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            <span class="keywordtype">string</span> id;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            <span class="keywordtype">string</span> Observacoes;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            <span class="comment">// Anexo</span></div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            <span class="keywordtype">string</span> anexo;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    };  </div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;}</div>
-<div class="line"><a name="l00230"></a><span class="lineno"><a class="line" href="namespaceUSEROPERATIONS.html">  230</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceUSEROPERATIONS.html">USEROPERATIONS</a> {</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="comment">    * Classe de Dados de Relatório</span></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00234"></a><span class="lineno"><a class="line" href="classUSEROPERATIONS_1_1RELATORIO.html">  234</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classUSEROPERATIONS_1_1RELATORIO.html">RELATORIO</a> {</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            <a class="code" href="classUSEROPERATIONS_1_1RELATORIO.html">RELATORIO</a>(<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            <span class="keywordtype">void</span> setResume();</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            <span class="keywordtype">void</span> getResume();</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            <span class="keywordtype">void</span> setProductionRel(<span class="keywordtype">int</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">float</span>, <span class="keywordtype">float</span>, <span class="keywordtype">float</span>, <span class="keywordtype">float</span>, <span class="keywordtype">float</span>, <span class="keywordtype">float</span>);</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <span class="keywordtype">void</span> setPRtoAMMg();</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            <span class="keywordtype">void</span> getRel();</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="keywordtype">int</span> *quant;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            <span class="comment">// Basic</span></div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            <span class="keywordtype">int</span> periodo[3];</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            <span class="keywordtype">string</span> ClientInic;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            <span class="keywordtype">string</span> Ramo;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            <span class="keywordtype">float</span> ValorParcela;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            <span class="keywordtype">float</span> comissao;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            <span class="keywordtype">float</span> AMMGpercent;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            <span class="keywordtype">float</span> ValorsemDeduc;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            <span class="keywordtype">float</span> Deduc;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            <span class="keywordtype">float</span> Repasse;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    };</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="comment">    * Classe de Dados Para Filtros nas Pesquisas</span></div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00258"></a><span class="lineno"><a class="line" href="classUSEROPERATIONS_1_1FILTRO.html">  258</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classUSEROPERATIONS_1_1FILTRO.html">FILTRO</a> {</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            <a class="code" href="classUSEROPERATIONS_1_1FILTRO.html">FILTRO</a>(<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            <span class="keywordtype">void</span> setFilters(<span class="keywordtype">string</span>,<span class="keywordtype">string</span>,<span class="keywordtype">string</span>, <span class="keywordtype">int</span>, <span class="keywordtype">long</span>);</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            <span class="keywordtype">int</span> *quant;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            <span class="comment">// Filtros</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            <span class="keywordtype">string</span> PNome;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            <span class="keywordtype">string</span> Pemail;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            <span class="keywordtype">string</span> Pseguro;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            <span class="keywordtype">int</span> Pidade;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            <span class="keywordtype">long</span> PCPF;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    };</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="comment">    *  Classe de identificação do mês</span></div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00274"></a><span class="lineno"><a class="line" href="classUSEROPERATIONS_1_1DATA.html">  274</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classUSEROPERATIONS_1_1DATA.html">DATA</a> {</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <a class="code" href="classUSEROPERATIONS_1_1DATA.html">DATA</a>(<span class="keywordtype">int</span>,Mes,<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keywordtype">int</span> getDay(){<span class="keywordflow">return</span> dia;}</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keywordtype">int</span> getMonth(<span class="keywordflow">return</span> mes;)</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordtype">int</span> getYear(){<span class="keywordflow">return</span> ano;}</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keyword">friend</span> ostream&amp; operator&lt;&lt;(ostream&amp;, <a class="code" href="classUSEROPERATIONS_1_1DATA.html">DATA</a> &amp;data);</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="keywordtype">int</span> dia;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        Mes mes;  </div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordtype">int</span> ano;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    };</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="comment">    * Classes de Prestações</span></div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00289"></a><span class="lineno"><a class="line" href="classUSEROPERATIONS_1_1PRESTACAO.html">  289</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classUSEROPERATIONS_1_1PRESTACAO.html">PRESTACAO</a> : <span class="keyword">public</span> <a class="code" href="classUSEROPERATIONS_1_1DATA.html">DATA</a> {</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <a class="code" href="classUSEROPERATIONS_1_1PRESTACAO.html">PRESTACAO</a>(<a class="code" href="classCADASTRO_1_1PRODUTO.html">PRODUTO</a>);</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keywordtype">void</span> setBegin(<span class="keywordtype">int</span>,Mes, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <span class="keywordtype">void</span> setEnd(<span class="keywordtype">int</span>, Mes, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keywordtype">void</span> getAllPrestations();</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordtype">void</span> getBegin();</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keywordtype">void</span> getEnd();</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <a class="code" href="classUSEROPERATIONS_1_1DATA.html">DATA</a> dataInicio, dataFinal; <span class="comment">// data inicio e final</span></div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keywordtype">int</span> prestation;     <span class="comment">// total de prestações </span></div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    };</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="comment">/* </span></div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="comment">    * Classe de Acesso ao Calendário</span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00304"></a><span class="lineno"><a class="line" href="classUSEROPERATIONS_1_1CALENDARIO.html">  304</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classUSEROPERATIONS_1_1CALENDARIO.html">CALENDARIO</a> {</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            <span class="keywordtype">void</span> AdicionarPagamento(<span class="keywordtype">int</span>, <span class="keywordtype">float</span>);</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            <span class="keywordtype">void</span> ImprimirPagamentos(<span class="keywordtype">int</span>[]);</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            <span class="keywordtype">int</span> Acess;  <span class="comment">// Define o tipo de acesso 0 ou 1</span></div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    };</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="comment">/* </span></div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="comment">    * Classe de Operações de Telemarketing</span></div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00314"></a><span class="lineno"><a class="line" href="classUSEROPERATIONS_1_1TELEMARKETING.html">  314</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classUSEROPERATIONS_1_1TELEMARKETING.html">TELEMARKETING</a> {</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            <span class="keywordtype">void</span> Autosend();</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            <span class="keywordtype">void</span> SendEmail();</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            <span class="keywordtype">void</span> SelectClient();</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            <span class="keywordtype">string</span> Sender;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            <span class="keywordtype">string</span> Recipient;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            <span class="keywordtype">string</span> Conteudo;      <span class="comment">// File</span></div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    };</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;}</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">enum</span> Mes { Janeiro=1,Fevereiro,Marco,Abril,Maio,junho,Julho,Agosto,Setembro,Outubro,Novembro,Dezembro };</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>UTILS {</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classUTILS_1_1FILE.html">   11</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classUTILS_1_1FILE.html">FILE</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    }; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="namespaceCOMUNS.html">   19</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceCOMUNS.html">COMUNS</a> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classCOMUNS_1_1PESSOA.html">   23</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classCOMUNS_1_1PESSOA.html">PESSOA</a>{};</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classCOMUNS_1_1ENDERECO.html">   29</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classCOMUNS_1_1ENDERECO.html">ENDERECO</a> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="classCOMUNS_1_1ENDERECO.html">ENDERECO</a>(<span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">int</span>, <span class="keywordtype">long</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">void</span> getAddress();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">string</span> Rua;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">string</span> Bairro;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">string</span> Complemento;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">string</span> Cidade;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">int</span> numero;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">long</span> CEP;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    };</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="namespaceCADASTRO.html">   59</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceCADASTRO.html">CADASTRO</a>{</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classCADASTRO_1_1PEDIDO.html">   61</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classCADASTRO_1_1PEDIDO.html">PEDIDO</a> {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="classCADASTRO_1_1PEDIDO.html">PEDIDO</a>(<a class="code" href="classCADASTRO_1_1CLIENTE.html">CADASTRO::CLIENTE</a>, <a class="code" href="classCADASTRO_1_1CORRETOR.html">CADASTRO::CORRETOR</a>, <a class="code" href="classCADASTRO_1_1PRODUTO.html">CADASTRO::PRODUTO</a>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">void</span> setPurchase(<span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordtype">void</span> setPrestation(USEROPERATIONS::PRESTACAO);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordtype">int</span> getPrestation(){<span class="keywordflow">return</span> prestations;}</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="classCADASTRO_1_1CLIENTE.html">CADASTRO::CLIENTE</a> cliente;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="classCADASTRO_1_1CORRETOR.html">CADASTRO::CORRETOR</a> corretor;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="classCADASTRO_1_1PRODUTO.html">CADASTRO::PRODUTO</a> produto;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        USEROPERATIONS::CALENDARIO calendario;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        USEROPERATIONS::PRESTACAO prestacoes;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordtype">int</span> prestations;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordtype">string</span> AssociacaoAMMG;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordtype">string</span> Observacoes;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordtype">string</span> IndicacaoX;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordtype">string</span> IndicouXYZ;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordtype">string</span> RelacaoFamiliar;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    };</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="classCADASTRO_1_1CLIENTE.html">  114</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classCADASTRO_1_1CLIENTE.html">CLIENTE</a> : <span class="keyword">public</span> <a class="code" href="classCOMUNS_1_1PESSOA.html">COMUNS::PESSOA</a>{</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <a class="code" href="classCADASTRO_1_1CLIENTE.html">CLIENTE</a>(<span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">int</span>*, <span class="keywordtype">long</span>, <span class="keywordtype">long</span>, <span class="keywordtype">long</span>, <span class="keywordtype">long</span>);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="keywordtype">void</span> setContact(<span class="keywordtype">string</span>, <span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <span class="keywordtype">void</span> setAddress(<span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">int</span>, <span class="keywordtype">long</span>);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="keywordtype">void</span> setHistory(USEROPERATIOS::HISTORICO);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="keywordtype">void</span> setFile(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keywordtype">void</span> getName();</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="keywordtype">void</span> getContact();</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <span class="keywordtype">void</span> getAddres();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keywordtype">void</span> getPurchase();</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <span class="keywordtype">void</span> getFIle();</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <span class="keywordtype">void</span> getFullClient();</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="comment">// Informações Básicas</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="keywordtype">string</span> nome;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="keywordtype">string</span> pessoa;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keywordtype">string</span> EstadoCivil;   <span class="comment">// C(asado), S(olteiro), D(ivorciado), V(iuvo)</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keywordtype">string</span> sexo;          <span class="comment">// M ou F</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="keywordtype">string</span> profissao;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            <span class="keywordtype">string</span> DocProf;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <a class="code" href="classUSER__OPERATIONS_1_1DATA.html">USER_OPERATIONS::DATA</a> nascimento;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <span class="keywordtype">long</span> CPF_CNPJ;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="keywordtype">long</span> RG;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <span class="keywordtype">long</span> CNH;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="comment">// Contato</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            <span class="keywordtype">string</span> telefone;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="keywordtype">string</span> email;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <span class="comment">// Endereço</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <a class="code" href="classCOMUNS_1_1ENDERECO.html">COMUNS::ENDERECO</a> endereco;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <span class="comment">// Demais dados</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <a class="code" href="classUSER__OPERATIONS_1_1HISTORICO.html">USER_OPERATIONS::HISTORICO</a> historico;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <span class="keywordtype">long</span> Renda;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="comment">// Anexo</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="keywordtype">string</span> Anexo;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    };</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="comment">    * Classe de Dados do Corretor</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="classCADASTRO_1_1CORRETOR.html">  187</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classCADASTRO_1_1CORRETOR.html">CORRETOR</a> : <span class="keyword">public</span> <a class="code" href="classCOMUNS_1_1PESSOA.html">COMUNS::PESSOA</a> {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            <a class="code" href="classCADASTRO_1_1CORRETOR.html">CORRETOR</a>();</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordtype">void</span> setBroker(<span class="keywordtype">string</span>, <span class="keywordtype">int</span>, <span class="keywordtype">long</span>);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keywordtype">void</span> setContact(<span class="keywordtype">string</span>, <span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <span class="keywordtype">void</span> setAddres(<span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">int</span>, <span class="keywordtype">long</span>);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <span class="keywordtype">void</span> getName();</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="keywordtype">void</span> getAddress();</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            <span class="keywordtype">void</span> getBroker();</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <span class="comment">// Informações Básicas</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <span class="keywordtype">string</span> Nome;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="keywordtype">int</span> type;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            <span class="keywordtype">long</span> CPF_CNPJ;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <span class="comment">// Contato</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="keywordtype">string</span> email;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <span class="keywordtype">string</span> telefone;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            <span class="comment">// Endereço</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            ENDERECO endereco;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    };</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="comment">    * Classe de Dados de Produto</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno"><a class="line" href="classCADASTRO_1_1PRODUTO.html">  210</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classCADASTRO_1_1PRODUTO.html">PRODUTO</a> {</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            <a class="code" href="classCADASTRO_1_1PRODUTO.html">PRODUTO</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <span class="keywordtype">int</span> setID(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            <span class="keywordtype">void</span> setProduct(<span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">float</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            <span class="keywordtype">void</span> setValues(<span class="keywordtype">float</span>, <span class="keywordtype">float</span>, <span class="keywordtype">float</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <span class="keywordtype">void</span> setFile(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            <span class="keywordtype">void</span> getProduct();</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="keywordtype">int</span> getPrestation(){<span class="keywordflow">return</span> prestacoes;};</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            <span class="keywordtype">int</span> ID;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            <span class="comment">// Informações Básicas</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            <span class="keywordtype">string</span> Seguradora;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            <span class="keywordtype">string</span> Ramo;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            <span class="keywordtype">string</span> Nome;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            <span class="keywordtype">string</span> Corretor;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            <span class="keywordtype">string</span> Vigencia;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            <span class="keywordtype">string</span> Agenciamento;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keywordtype">float</span> Comissao;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <span class="keywordtype">int</span> Tipo;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <span class="comment">// Valores</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            <span class="keywordtype">float</span> premio;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            <span class="keywordtype">float</span> comissionamento;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            <span class="keywordtype">float</span> capitalsegurado;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            <span class="keywordtype">string</span> Veiculo;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            <span class="keywordtype">string</span> id;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            <span class="keywordtype">string</span> Observacoes;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            <span class="comment">// Anexo</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            <span class="keywordtype">string</span> anexo;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    };  </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;}</div>
+<div class="line"><a name="l00244"></a><span class="lineno"><a class="line" href="namespaceUSER__OPERATIONS.html">  244</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceUSER__OPERATIONS.html">USER_OPERATIONS</a> {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="comment">    * Classe de Dados de Relatório</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno"><a class="line" href="classUSER__OPERATIONS_1_1RELATORIO.html">  248</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classUSER__OPERATIONS_1_1RELATORIO.html">RELATORIO</a> {</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            <a class="code" href="classUSER__OPERATIONS_1_1RELATORIO.html">RELATORIO</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            <span class="keywordtype">void</span> setResume();</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            <span class="keywordtype">void</span> getResume();</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            <span class="keywordtype">void</span> setProductionRel(<span class="keywordtype">int</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">float</span>, <span class="keywordtype">float</span>, <span class="keywordtype">float</span>, <span class="keywordtype">float</span>, <span class="keywordtype">float</span>, <span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            <span class="keywordtype">void</span> setPRtoAMMg();</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <span class="keywordtype">void</span> getRel();</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            <span class="keywordtype">int</span> *quant;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            <span class="comment">// Basic</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            <span class="keywordtype">int</span> periodo[3];</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            <span class="keywordtype">string</span> ClientInic;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            <span class="keywordtype">string</span> Ramo;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            <span class="keywordtype">float</span> ValorParcela;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            <span class="keywordtype">float</span> comissao;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            <span class="keywordtype">float</span> AMMGpercent;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            <span class="keywordtype">float</span> ValorsemDeduc;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            <span class="keywordtype">float</span> Deduc;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            <span class="keywordtype">float</span> Repasse;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    };</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="comment">    * Classe de Dados Para Filtros nas Pesquisas</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno"><a class="line" href="classUSER__OPERATIONS_1_1FILTRO.html">  272</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classUSER__OPERATIONS_1_1FILTRO.html">FILTRO</a> {</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            <a class="code" href="classUSER__OPERATIONS_1_1FILTRO.html">FILTRO</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            <span class="keywordtype">void</span> setFilters(<span class="keywordtype">string</span>,<span class="keywordtype">string</span>,<span class="keywordtype">string</span>, <span class="keywordtype">int</span>, <span class="keywordtype">long</span>);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            <span class="keywordtype">int</span> *quant;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            <span class="comment">// Filtros</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            <span class="keywordtype">string</span> PNome;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            <span class="keywordtype">string</span> Pemail;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            <span class="keywordtype">string</span> Pseguro;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            <span class="keywordtype">int</span> Pidade;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            <span class="keywordtype">long</span> PCPF;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    };</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="comment">    *  Classe de identificação do mês</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno"><a class="line" href="classUSER__OPERATIONS_1_1DATA.html">  288</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classUSER__OPERATIONS_1_1DATA.html">DATA</a> {</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <a class="code" href="classUSER__OPERATIONS_1_1DATA.html">DATA</a>(<span class="keywordtype">int</span>,Mes,<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordtype">int</span> getDay(){<span class="keywordflow">return</span> dia;}</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keywordtype">int</span> getMonth(<span class="keywordflow">return</span> mes;)</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <span class="keywordtype">int</span> getYear(){<span class="keywordflow">return</span> ano;}</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keyword">friend</span> ostream&amp; operator&lt;&lt;(ostream&amp;, <a class="code" href="classUSER__OPERATIONS_1_1DATA.html">DATA</a> &amp;data);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keywordtype">int</span> dia;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        Mes mes;  </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <span class="keywordtype">int</span> ano;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    };</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="comment">    * Classes de Prestações</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno"><a class="line" href="classUSER__OPERATIONS_1_1PRESTACAO.html">  303</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classUSER__OPERATIONS_1_1PRESTACAO.html">PRESTACAO</a> : <span class="keyword">public</span> <a class="code" href="classUSER__OPERATIONS_1_1DATA.html">DATA</a> {</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <a class="code" href="classUSER__OPERATIONS_1_1PRESTACAO.html">PRESTACAO</a>(<a class="code" href="classCADASTRO_1_1PRODUTO.html">CADASTRO::PRODUTO</a>);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <span class="keywordtype">void</span> setBegin(<span class="keywordtype">int</span>,Mes, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="keywordtype">void</span> setEnd(<span class="keywordtype">int</span>, Mes, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="keywordtype">void</span> getAllPrestations();</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="keywordtype">void</span> getBegin();</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordtype">void</span> getEnd();</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <a class="code" href="classUSER__OPERATIONS_1_1DATA.html">DATA</a> dataInicio, dataFinal; <span class="comment">// data inicio e final</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <span class="keywordtype">int</span> prestation;     <span class="comment">// total de prestações </span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    };</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="comment">/* </span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="comment">    * Classe de Acesso ao Calendário</span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno"><a class="line" href="classUSER__OPERATIONS_1_1CALENDARIO.html">  318</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classUSER__OPERATIONS_1_1CALENDARIO.html">CALENDARIO</a> {</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            <span class="keywordtype">void</span> AdicionarPagamento(<span class="keywordtype">int</span>, <span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            <span class="keywordtype">void</span> ImprimirPagamentos(<span class="keywordtype">int</span>[]);</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            <span class="keywordtype">int</span> Acess;  <span class="comment">// Define o tipo de acesso 0 ou 1</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    };</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="comment">/* </span></div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="comment">    * Classe de Operações de Telemarketing</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno"><a class="line" href="classUSER__OPERATIONS_1_1TELEMARKETING.html">  328</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classUSER__OPERATIONS_1_1TELEMARKETING.html">TELEMARKETING</a> {</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            <span class="keywordtype">void</span> Autosend();</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            <span class="keywordtype">void</span> SendEmail();</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            <span class="keywordtype">void</span> SelectClient();</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            <span class="keywordtype">string</span> Sender;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            <span class="keywordtype">string</span> Recipient;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            <span class="keywordtype">string</span> Conteudo;      <span class="comment">// File</span></div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    };</div>
+<div class="line"><a name="l00341"></a><span class="lineno"><a class="line" href="classUSER__OPERATIONS_1_1HISTORICO.html">  341</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classUSER__OPERATIONS_1_1HISTORICO.html">HISTORICO</a> {</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <a class="code" href="classUSER__OPERATIONS_1_1HISTORICO.html">HISTORICO</a>();</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <a class="code" href="classUSER__OPERATIONS_1_1DATA.html">DATA</a> data;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    }</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassUSEROPERATIONS_1_1TELEMARKETING_html"><div class="ttname"><a href="classUSEROPERATIONS_1_1TELEMARKETING.html">USEROPERATIONS::TELEMARKETING</a></div><div class="ttdef"><b>Definition:</b> ClassDados.h:314</div></div>
-<div class="ttc" id="anamespaceCOMUNS_html"><div class="ttname"><a href="namespaceCOMUNS.html">COMUNS</a></div><div class="ttdoc">Classes comuns ao corretor e Cliente.</div><div class="ttdef"><b>Definition:</b> ClassDados.h:52</div></div>
-<div class="ttc" id="aclassUSEROPERATIONS_1_1FILTRO_html"><div class="ttname"><a href="classUSEROPERATIONS_1_1FILTRO.html">USEROPERATIONS::FILTRO</a></div><div class="ttdef"><b>Definition:</b> ClassDados.h:258</div></div>
-<div class="ttc" id="anamespaceUSEROPERATIONS_html"><div class="ttname"><a href="namespaceUSEROPERATIONS.html">USEROPERATIONS</a></div><div class="ttdoc">Operações do usuário.</div><div class="ttdef"><b>Definition:</b> ClassDados.h:230</div></div>
-<div class="ttc" id="aclassCOMUNS_1_1ENDERECO_html"><div class="ttname"><a href="classCOMUNS_1_1ENDERECO.html">COMUNS::ENDERECO</a></div><div class="ttdoc">Classe endereço, comum a cliente e corretor.</div><div class="ttdef"><b>Definition:</b> ClassDados.h:62</div></div>
-<div class="ttc" id="aclassUSEROPERATIONS_1_1CALENDARIO_html"><div class="ttname"><a href="classUSEROPERATIONS_1_1CALENDARIO.html">USEROPERATIONS::CALENDARIO</a></div><div class="ttdef"><b>Definition:</b> ClassDados.h:304</div></div>
-<div class="ttc" id="aclassUSEROPERATIONS_1_1PRESTACAO_html"><div class="ttname"><a href="classUSEROPERATIONS_1_1PRESTACAO.html">USEROPERATIONS::PRESTACAO</a></div><div class="ttdef"><b>Definition:</b> ClassDados.h:289</div></div>
-<div class="ttc" id="aclassCADASTRO_1_1CLIENTE_html"><div class="ttname"><a href="classCADASTRO_1_1CLIENTE.html">CADASTRO::CLIENTE</a></div><div class="ttdoc">Classe de Dados do Cliente.</div><div class="ttdef"><b>Definition:</b> ClassDados.h:100</div></div>
-<div class="ttc" id="anamespaceCADASTRO_html"><div class="ttname"><a href="namespaceCADASTRO.html">CADASTRO</a></div><div class="ttdoc">Classes de cadastro de Cliente, Corretor e Produto.</div><div class="ttdef"><b>Definition:</b> ClassDados.h:92</div></div>
-<div class="ttc" id="aclassCOMUNS_1_1PESSOA_html"><div class="ttname"><a href="classCOMUNS_1_1PESSOA.html">COMUNS::PESSOA</a></div><div class="ttdoc">Classe Pessoa comum a Corretor e Cliente.</div><div class="ttdef"><b>Definition:</b> ClassDados.h:56</div></div>
-<div class="ttc" id="aclassPEDIDO_html"><div class="ttname"><a href="classPEDIDO.html">PEDIDO</a></div><div class="ttdoc">Classe que registra o pedido, mesclando cliente, produto e corretor.</div><div class="ttdef"><b>Definition:</b> ClassDados.h:18</div></div>
-<div class="ttc" id="aclassFILE_html"><div class="ttname"><a href="classFILE.html">FILE</a></div><div class="ttdoc">Classe File para arquivos anexados.</div><div class="ttdef"><b>Definition:</b> ClassDados.h:45</div></div>
-<div class="ttc" id="aclassCADASTRO_1_1CORRETOR_html"><div class="ttname"><a href="classCADASTRO_1_1CORRETOR.html">CADASTRO::CORRETOR</a></div><div class="ttdef"><b>Definition:</b> ClassDados.h:173</div></div>
-<div class="ttc" id="aclassUSEROPERATIONS_1_1RELATORIO_html"><div class="ttname"><a href="classUSEROPERATIONS_1_1RELATORIO.html">USEROPERATIONS::RELATORIO</a></div><div class="ttdef"><b>Definition:</b> ClassDados.h:234</div></div>
-<div class="ttc" id="aclassUSEROPERATIONS_1_1DATA_html"><div class="ttname"><a href="classUSEROPERATIONS_1_1DATA.html">USEROPERATIONS::DATA</a></div><div class="ttdef"><b>Definition:</b> ClassDados.h:274</div></div>
-<div class="ttc" id="aclassCADASTRO_1_1PRODUTO_html"><div class="ttname"><a href="classCADASTRO_1_1PRODUTO.html">CADASTRO::PRODUTO</a></div><div class="ttdef"><b>Definition:</b> ClassDados.h:196</div></div>
+<div class="ttc" id="anamespaceUSER__OPERATIONS_html"><div class="ttname"><a href="namespaceUSER__OPERATIONS.html">USER_OPERATIONS</a></div><div class="ttdoc">Operações do usuário.</div><div class="ttdef"><b>Definition:</b> ClassDados.h:244</div></div>
+<div class="ttc" id="anamespaceCOMUNS_html"><div class="ttname"><a href="namespaceCOMUNS.html">COMUNS</a></div><div class="ttdoc">Classes comuns ao corretor e Cliente.</div><div class="ttdef"><b>Definition:</b> ClassDados.h:19</div></div>
+<div class="ttc" id="aclassCADASTRO_1_1PEDIDO_html"><div class="ttname"><a href="classCADASTRO_1_1PEDIDO.html">CADASTRO::PEDIDO</a></div><div class="ttdoc">Classe que registra o pedido, mesclando cliente, produto e corretor.</div><div class="ttdef"><b>Definition:</b> ClassDados.h:61</div></div>
+<div class="ttc" id="aclassUSER__OPERATIONS_1_1HISTORICO_html"><div class="ttname"><a href="classUSER__OPERATIONS_1_1HISTORICO.html">USER_OPERATIONS::HISTORICO</a></div><div class="ttdoc">Classe que registra o histórico do cliente.</div><div class="ttdef"><b>Definition:</b> ClassDados.h:341</div></div>
+<div class="ttc" id="aclassCOMUNS_1_1ENDERECO_html"><div class="ttname"><a href="classCOMUNS_1_1ENDERECO.html">COMUNS::ENDERECO</a></div><div class="ttdoc">Classe endereço, comum a cliente e corretor.</div><div class="ttdef"><b>Definition:</b> ClassDados.h:29</div></div>
+<div class="ttc" id="aclassUSER__OPERATIONS_1_1TELEMARKETING_html"><div class="ttname"><a href="classUSER__OPERATIONS_1_1TELEMARKETING.html">USER_OPERATIONS::TELEMARKETING</a></div><div class="ttdef"><b>Definition:</b> ClassDados.h:328</div></div>
+<div class="ttc" id="aclassCADASTRO_1_1CLIENTE_html"><div class="ttname"><a href="classCADASTRO_1_1CLIENTE.html">CADASTRO::CLIENTE</a></div><div class="ttdoc">Classe de Dados do Cliente.</div><div class="ttdef"><b>Definition:</b> ClassDados.h:114</div></div>
+<div class="ttc" id="anamespaceCADASTRO_html"><div class="ttname"><a href="namespaceCADASTRO.html">CADASTRO</a></div><div class="ttdoc">Classes de cadastro de Cliente, Corretor e Produto.</div><div class="ttdef"><b>Definition:</b> ClassDados.h:59</div></div>
+<div class="ttc" id="aclassUSER__OPERATIONS_1_1PRESTACAO_html"><div class="ttname"><a href="classUSER__OPERATIONS_1_1PRESTACAO.html">USER_OPERATIONS::PRESTACAO</a></div><div class="ttdef"><b>Definition:</b> ClassDados.h:303</div></div>
+<div class="ttc" id="aclassCOMUNS_1_1PESSOA_html"><div class="ttname"><a href="classCOMUNS_1_1PESSOA.html">COMUNS::PESSOA</a></div><div class="ttdoc">Classe Pessoa comum a Corretor e Cliente.</div><div class="ttdef"><b>Definition:</b> ClassDados.h:23</div></div>
+<div class="ttc" id="aclassUSER__OPERATIONS_1_1DATA_html"><div class="ttname"><a href="classUSER__OPERATIONS_1_1DATA.html">USER_OPERATIONS::DATA</a></div><div class="ttdef"><b>Definition:</b> ClassDados.h:288</div></div>
+<div class="ttc" id="aclassUTILS_1_1FILE_html"><div class="ttname"><a href="classUTILS_1_1FILE.html">UTILS::FILE</a></div><div class="ttdoc">Classe File para arquivos anexados.</div><div class="ttdef"><b>Definition:</b> ClassDados.h:11</div></div>
+<div class="ttc" id="aclassCADASTRO_1_1CORRETOR_html"><div class="ttname"><a href="classCADASTRO_1_1CORRETOR.html">CADASTRO::CORRETOR</a></div><div class="ttdef"><b>Definition:</b> ClassDados.h:187</div></div>
+<div class="ttc" id="aclassUSER__OPERATIONS_1_1CALENDARIO_html"><div class="ttname"><a href="classUSER__OPERATIONS_1_1CALENDARIO.html">USER_OPERATIONS::CALENDARIO</a></div><div class="ttdef"><b>Definition:</b> ClassDados.h:318</div></div>
+<div class="ttc" id="aclassUSER__OPERATIONS_1_1FILTRO_html"><div class="ttname"><a href="classUSER__OPERATIONS_1_1FILTRO.html">USER_OPERATIONS::FILTRO</a></div><div class="ttdef"><b>Definition:</b> ClassDados.h:272</div></div>
+<div class="ttc" id="aclassCADASTRO_1_1PRODUTO_html"><div class="ttname"><a href="classCADASTRO_1_1PRODUTO.html">CADASTRO::PRODUTO</a></div><div class="ttdef"><b>Definition:</b> ClassDados.h:210</div></div>
+<div class="ttc" id="aclassUSER__OPERATIONS_1_1RELATORIO_html"><div class="ttname"><a href="classUSER__OPERATIONS_1_1RELATORIO.html">USER_OPERATIONS::RELATORIO</a></div><div class="ttdef"><b>Definition:</b> ClassDados.h:248</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

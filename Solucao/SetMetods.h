@@ -10,6 +10,11 @@
 #include <list>
 #include "ClassDados.h"
 using namespace std;
+using namespace COMUNS;
+using namespace CADASTRO;
+using namespace USEROPERATIONS;
+using namespace UTILS;
+
 /**
  *  @brief Classe contendo a construção do Endereço
  */
@@ -34,17 +39,25 @@ void ENDERECO::getAddress()
 /**
     ********** PEDIDO **********
 */
-PEDIDO::PEDIDO(CLIENTE cl, CORRETOR co, PRODUTO po)
+UTILS::PEDIDO::PEDIDO(CLIENTE cl, CORRETOR co, PRODUTO po)
 {
     this.cliente = cl;
     this.corretor = co;
     this.produto = po;
 }
+void UTILS::PEDIDO::setPurchase(string a = "", string obs = "", string indx = "", string indxyz = "", string rf = "")    // cria a instância com valores default
+{
+    AssociacaoAMMG = a;
+    Observacoes = obs;
+    IndicacaoX = indx;
+    IndicouXYZ = indxyz;
+    RelacaoFamiliar = rf;
+}
 /**
     ********* Client ********    
 */
 /// Construtor
-CLIENTE::CLIENTE(string n = "", string p = "", string ec = "", string s = "", string pr = "", string dp = "", int* nasc=0, long cpf = 0, long rg = 0, long CNH = 0)   /// cria a instância com valores default
+CADASTRO::CLIENTE::CLIENTE(string n = "", string p = "", string ec = "", string s = "", string pr = "", string dp = "", long cpf = 0, long rg = 0, long cnh = 0, long r = 0)   /// cria a instância com valores default
 {
     nome = n;
     pessoa = p;
@@ -52,10 +65,10 @@ CLIENTE::CLIENTE(string n = "", string p = "", string ec = "", string s = "", st
     sexo = s;
     profissao = pr;
     DocProf = dp;
-    nascimento = nasc;
     CPF_CNPJ = cpf;
     RG = rg;
     CNH = cnh;
+    Renda = r;
 }
 /**
     métodos set
@@ -76,17 +89,7 @@ void CLIENTE::setAddress(string r = "", string b = "", string com = "", string c
     ptr->numero = n;
     ptr->CEP = c;
 }
-void CLIENTE::setPurchase(string a = "", string c = "", string h = "", string obs = "", string indx = "", string indxyz = "", string rf = "", int r = 0)    // cria a instância com valores default
-{
-    AssociacaoAMMG = a;
-    Corretor = c;
-    Historico = h;
-    Observacoes = obs;
-    IndicacaoX = indx;
-    IndicouXYZ = indxyz;
-    RelacaoFamiliar = rf;
-    Renda = r;
-}
+
 void CLIENTE::setFile(string nameFile = "")
 {
     FILE anexo, *ptr;

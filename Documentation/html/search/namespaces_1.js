@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['useroperations_51',['USEROPERATIONS',['../namespaceUSEROPERATIONS.html',1,'']]]
+  ['user_5foperations_56',['USER_OPERATIONS',['../namespaceUSER__OPERATIONS.html',1,'']]]
 ];
