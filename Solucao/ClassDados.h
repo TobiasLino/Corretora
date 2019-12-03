@@ -6,40 +6,15 @@
 */
 enum Mes { Janeiro=1,Fevereiro,Marco,Abril,Maio,junho,Julho,Agosto,Setembro,Outubro,Novembro,Dezembro };
 using namespace std;
-/** @brief Classe que registra o pedido, mesclando cliente, produto e corretor. */
-class PEDIDO {
-    using namespace CADASTRO;
-    /**
-     * @details 
-     *  Registra o pedido como mediador, anexando as informações do cliente,
-     *  produto e corretor, bem como as prestações, no calendário.
-     *  O usuário pode obter todas as informações e imprimi-las na tela.
-     * @param PEDIDO        Construtor principal
-     * @param CLIENTE       Instância de CLIENTE
-     * @param CORRETOR      Instância de CORRETOR
-     * @param PRODUTO       Instância de PRODUTO
-     * @param CALENDARIO    Instância de CALENDARIO(cria as prestações)
-     * @param prestations   Número de Prestações
-     * @return              Registro do pedido
-     */
-public:
-    PEDIDO(CADASTRO::CLIENTE, CADASTRO::CORRETOR, CADASTRO::PRODUTO);
-    void setPrestation();
-    int getPrestation(){return prestations;}
-private:
-    CADASTRO::CLIENTE cliente;
-    CADASTRO::CORRETOR corretor;
-    CADASTRO::PRODUTO produto;
-    USEROPERATIONS::CALENDARIO calendario;
-    int prestations;
-};
-/** @brief Classe File para arquivos anexados. */
-class FILE {
-    /**
-     * @details
-     *  Salva os arquivos anexados nos cadastros como classes.
-     */
-};
+namespace UTILS {
+    /** @brief Classe File para arquivos anexados. */
+    class FILE {
+        /**
+         * @details
+         *  Salva os arquivos anexados nos cadastros como classes.
+         */
+    }; 
+}
 /** @brief Classes comuns ao corretor e Cliente. */
 namespace COMUNS {
     /**
@@ -57,12 +32,12 @@ namespace COMUNS {
          * @brief Construtor ENDEREÇO
          * @details 
          *  Constrói uma instância da classe. Se estiver vazia, cria com parâmetros default.
-         * @param r     Rua a ser inserida
-         * @param b     Bairro a ser inserido
-         * @param com   Complemento, se houver
-         * @param cid   Cidade a ser inserida
-         * @param n     Numero da casa
-         * @param c     CEP da Rua
+         * @param string r     Rua a ser inserida
+         * @param string b     Bairro a ser inserido
+         * @param string com   Complemento, se houver
+         * @param string cid   Cidade a ser inserida
+         * @param int n     Numero da casa
+         * @param long c     CEP da Rua
          * @return      Constroi uma instancia da classe ENDERECO com os parametros passados
         */
         ENDERECO(string, string, string, string, int, long);
@@ -82,7 +57,54 @@ namespace COMUNS {
 }
 /** @brief Classes de cadastro de Cliente, Corretor e Produto. */
 namespace CADASTRO{
-    using namespace CORRETORA::COMUNS;
+        /** @brief Classe que registra o pedido, mesclando cliente, produto e corretor. */
+    class PEDIDO {
+        /**
+         * @details 
+         *  Registra o pedido como mediador, anexando as informações do cliente,
+         *  produto e corretor, bem como as prestações, no calendário.
+         *  O usuário pode obter todas as informações e imprimi-las na tela.
+         */
+    public:
+        /**
+         * @brief construtor de classe PEDIDO.
+         * @param class CLIENTE     Cliente que fez o pedido
+         * @param class CORRETOR    Corretor que realizou o pedido
+         * @param class PRODUTO     Produto comprado
+         * @return      Gera um pedido para o sistema
+         */
+        PEDIDO(CADASTRO::CLIENTE, CADASTRO::CORRETOR, CADASTRO::PRODUTO);
+        /**
+         * @brief   Define as informações adicionais com relação ao pedido.
+         * @param string a               Associação com a corretora
+         * @param string obs             Observações do pedido
+         * @param string IndicaçãoX      Quem indicou o cliente
+         * @param string IndicaçãoXYZ    Quem o cliente indica
+         * @param string RelacaoFamiliar Relação familiar do indicado com o cliente
+         * @return      Insere os valores dentro de suas variáveis correspondentes
+         */
+        void setPurchase(string, string, string, string, string, string, string);
+        /**
+         * @brief   Define as prestações que serão realizadas na compra
+         * @param class pr  Prestações da classe PRESTACAO
+         * @see     USEROPERATIONS::PRESTACAO
+         * @return      Prestações do pedido.
+         */
+        void setPrestation(USEROPERATIONS::PRESTACAO);
+        int getPrestation(){return prestations;}
+    private:
+        CADASTRO::CLIENTE cliente;
+        CADASTRO::CORRETOR corretor;
+        CADASTRO::PRODUTO produto;
+        USEROPERATIONS::CALENDARIO calendario;
+        USEROPERATIONS::PRESTACAO prestacoes;
+        int prestations;
+        string AssociacaoAMMG;
+        string Observacoes;
+        string IndicacaoX;
+        string IndicouXYZ;
+        string RelacaoFamiliar;
+    };
     /**
      * @brief Classe de Dados do Cliente
      * @details
@@ -107,11 +129,11 @@ namespace CADASTRO{
              * @param long cnh   CNH
              * @return      Cria a instância da classe cliente
              */
-            CLIENTE(string, string, string, string, string, string, int*, long, long, long);
+            CLIENTE(string, string, string, string, string, string, int*, long, long, long, long);
             /**
              * @brief Define o contato
-             * @param t     Telefone
-             * @param e     Email
+             * @param string t     Telefone
+             * @param string e     Email
              * @return      Atribui os valores às variáveis de contato
              */
             void setContact(string, string);
@@ -122,7 +144,13 @@ namespace CADASTRO{
              * @see COMUNS::ENDERECO
              */
             void setAddress(string, string, string, string, int, long);
-            void setPurchase(string, string, string, string, string, string, string, int);
+            /**
+             * @brief Define a relação de dados de compra do cliente.
+             * @details
+             *  Adiciona os respectivos dados com realação a associação do cliente com a corretora.
+             * @param string a          Associação do cliente com a corretora
+             */
+            void setHistory(USEROPERATIOS::HISTORICO);
             void setFile(string);
             void getName();
             void getContact();
@@ -138,7 +166,7 @@ namespace CADASTRO{
             string sexo;          // M ou F
             string profissao;
             string DocProf;
-            int nascimento[3];
+            USER_OPERATIONS::DATA nascimento;
             long CPF_CNPJ;
             long RG;
             long CNH;
@@ -146,16 +174,10 @@ namespace CADASTRO{
             string telefone;
             string email;
             // Endereço
-            ENDERECO endereco;
+            COMUNS::ENDERECO endereco;
             // Demais dados
-            string AssociacaoAMMG;
-            string Corretor;
-            string Historico;
-            string Observacoes;
-            string IndicacaoX;
-            string IndicouXYZ;
-            string RelacaoFamiliar;
-            int Renda;
+            USER_OPERATIONS::HISTORICO historico;
+            long Renda;
             // Anexo
             string Anexo;
     };
@@ -219,7 +241,7 @@ namespace CADASTRO{
 /**
  * @brief Operações do usuário
  */
-namespace USEROPERATIONS {
+namespace USER_OPERATIONS {
     /*
     * Classe de Dados de Relatório
     */
@@ -280,7 +302,7 @@ namespace USEROPERATIONS {
     */
     class PRESTACAO : public DATA {
     public:
-        PRESTACAO(PRODUTO);
+        PRESTACAO(CADASTRO::PRODUTO);
         void setBegin(int,Mes, int);
         void setEnd(int, Mes, int);
         void getAllPrestations();
@@ -313,4 +335,13 @@ namespace USEROPERATIONS {
             string Recipient;
             string Conteudo;      // File
     };
+    /**
+     * @brief Classe que registra o histórico do cliente
+     */
+    class HISTORICO {
+    public:
+        HISTORICO();
+    private:
+        DATA data;
+    }
 }
