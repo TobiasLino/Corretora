@@ -1,27 +1,7 @@
 #include <iostream>
-#include <stack>
-#include <algorithm>
-#include <deque>
-#include <list>
-#include <queue>
-#include "ClassDados.h"
+#include "data.hpp"
 
-using namespace std;
-
-/*
- * Arquivo com as classes de operações dentro do programa, bem como suas funções
- * 
- * Contém as classes de ordenação, pesquisa e salvar,acessar e remover no arquivo
- * 
-*/
-namespace SYSTEM_OPERATIONS {
-    /*
-    
-
-    ********** CLASSES *********
-
-
-    */
+namespace System_Operations {
     template <class Type>
     class LISTA {
     public:
@@ -58,8 +38,8 @@ namespace SYSTEM_OPERATIONS {
     void OrdinFIle(char*);  // Ordena as classes no arquivo
     void SeCinF(char*); // Pesquisa as classes no arquivo
     void SeSinF(char*); // Pesquisa as Strings dentro dos dados das classes
-    void SaCtoFile(char*, CLIENTE x); // Salva o Cliente no Arquivo 
-    void SaBtoFile(char*, CORRETOR x); // Salva o corretor no arquivo
-    void SaPtoFile(char*, PRODUTO x); // Salva o produto no arquivo
-    void saReltoFile(char*, PRODUTO x); // Salva o relatório no arquivo
+    void SaCtoFile(char*, Cadastro::Cliente x); // Salva o Cliente no Arquivo 
+    void SaBtoFile(char*, Cadastro::Corretor x); // Salva o corretor no arquivo
+    void SaPtoFile(char*, Cadastro::Produto x); // Salva o produto no arquivo
+    void saReltoFile(char*, Cadastro::Produto x); // Salva o relatório no arquivo
 }
