@@ -5,7 +5,8 @@
 #include <iostream>
 
 #include <mes.hpp>
-
+// Classe Abstrata para registro de data.
+// Necessário implementação pelo fato de ser uma biblioteca dinâmica.
 class Data {
  public:
   Data();
