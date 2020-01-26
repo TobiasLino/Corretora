@@ -1,4 +1,5 @@
 // Copyright 2020 Tobias
+// plugin de data.hpp
 #include <iostream>
 
 #include <nascimento.hpp>
@@ -9,7 +10,7 @@ Nascimento::Nascimento() {
   this->ano_ = 0;
 }
 Nascimento::~Nascimento() {
-  std::cout << "DESTRUCTION: DATA." << std::endl;
+  std::cout << "DESTRUCTION: NASCIMENTO." << std::endl;
 }
 void Nascimento::set_day(int dia) {
   this->dia_ = dia;
@@ -20,13 +21,13 @@ void Nascimento::set_mes(Mes mes) {
 void Nascimento::set_ano(int ano) {
   this->ano_ = ano;
 }
-int Nascimento::get_day() {
+int Nascimento::get_day() __attribute__((pure)) {
   return this->dia_;
 }
-int Nascimento::get_mes() {
+int Nascimento::get_mes() __attribute__((pure)) {
   return this->mes_;
 }
-int Nascimento::get_ano() {
+int Nascimento::get_ano() __attribute__((pure)) {
   return this->ano_;
 }
 std::ostream& operator<<(std::ostream& out, Nascimento& data) {

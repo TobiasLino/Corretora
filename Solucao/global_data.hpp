@@ -79,30 +79,6 @@ class File {
   std::string file_name_;
 };
 
-class Address {
- public:
-  Address();
-  void set_address(std::string rua, std::string bairro,
-                   std::string complemento, std::string cidade, 
-                   unsigned long numero, std::string cep);
-  void get_address() {
-    std::cout  << "Rua: " << this->rua_ << std::endl
-    << "Número: " << this->numero_ << std::endl
-    << "Complemento: " << this->complemento_ << std::endl
-    << "Bairro: " << this->bairro_ << std::endl
-    << "Cidade: " << this->cidade_ << std::endl
-    << "CEP: " << this->cep_ << std::endl;
-  }
-  void Update();
- private:
-  std::string rua_;
-  std::string bairro_;
-  std::string complemento_;
-  std::string cidade_;
-  std::string numero_;
-  std::string cep_;
-};
-
 
 class Contact {
  public:

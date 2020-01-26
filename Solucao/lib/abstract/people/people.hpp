@@ -23,4 +23,9 @@ class Pessoa {
   Data *nascimento;
 };
 
+extern "C" {
+  typedef Pessoa *P_load_t();
+  typedef void P_unload_t(Pessoa *);
+}
+
 #endif  // SOLUCAO_LIB_PESSOA_HPP_
