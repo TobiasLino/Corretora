@@ -1,12 +1,12 @@
 // Copyright 2020 Tobias
+// Biblioteca dinâmica, com os plugins: nascimento e prestacao
 #ifndef SOLUCAO_LIB_ABSTRACT_DATES_DATA_HPP_
 #define SOLUCAO_LIB_ABSTRACT_DATES_DATA_HPP_
 
 #include <iostream>
 
 #include <mes.hpp>
-// Classe Abstrata para registro de data.
-// Necessário implementação pelo fato de ser uma biblioteca dinâmica.
+
 class Data {
  public:
   Data();
