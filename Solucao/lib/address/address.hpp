@@ -14,12 +14,12 @@ class Address {
   void set_complement(std::string complemento);
   void set_city(std::string cidade);
   void set_zip(std::string cep);
-  std::string get_street();
-  std::string get_neighborhood();
-  std::string get_number();
-  std::string get_complement();
-  std::string get_city();
-  std::string get_zip();
+  std::string get_street() __attribute__((pure));
+  std::string get_neighborhood() __attribute__((pure));
+  std::string get_number() __attribute__((pure));
+  std::string get_complement() __attribute__((pure));
+  std::string get_city() __attribute__((pure));
+  std::string get_zip() __attribute__((pure));
  private:
   std:string street_;
   std:string neighborhood_;
