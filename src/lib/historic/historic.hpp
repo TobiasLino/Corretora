@@ -1,0 +1,6 @@
+#ifndef SRC_LIB_HISTORIC_HISTORIC_HPP
+#define SRC_LIB_HISTORIC_HISTORIC_HPP
+
+class Historico {};
+
+#endif  // SRC_LIB_HISTORIC_HISTORIC_HPP
